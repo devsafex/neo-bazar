@@ -21,7 +21,10 @@
     "id": 3,
     "name": "Gaming Mouse",
     "price": "$29.99",
-    "discount_price": "$22.99",
+    "fetch("/deals.json")
+    .then((res) => res.json())
+    .then((data) => console.log(data))
+    .catch((error) => console.error("Error loading JSON:", error));": "$22.99",
     "image": "mouse.jpg",
     "rating": 4.8,
     "reviews": 15
