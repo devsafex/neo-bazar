@@ -2,7 +2,6 @@ import PropTypes from "prop-types";
 import { Button as Mtbtn } from "@material-tailwind/react";
 
 const Button = ({
-  // Props
   children,
   loading = false,
   size
