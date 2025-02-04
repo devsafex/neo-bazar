@@ -1,10 +1,13 @@
-import { Button } from "@material-tailwind/react";
+import Button from "../../Shaired/Button";
+
+
 
 
 const Home = () => {
       return (
-            <div>
-                  <Button>Hello </Button>
+            <div className=" flex gap-6">
+                  <Button>This is shaired btn</Button>
+                  <Button>This is shaired btn2</Button>
                    {/* Hello i am home */}
             </div>
       );
