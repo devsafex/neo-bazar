@@ -1,9 +1,11 @@
+import { Button } from "@material-tailwind/react";
 
 
 const Home = () => {
       return (
             <div>
-                   Hello i am home
+                  <Button>Hello </Button>
+                   {/* Hello i am home */}
             </div>
       );
 };
