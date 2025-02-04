@@ -10,7 +10,6 @@ const Button = ({
     <div>
       {/* Button form material tailwind  */}
       <Mtbtn
-      //   styles
       size={size}
         
         loading={loading}
