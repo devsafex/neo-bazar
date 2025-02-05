@@ -1,8 +1,9 @@
 import PropTypes from "prop-types";
 import { Button as Mtbtn } from "@material-tailwind/react";
+import { PiHandbagBold } from "react-icons/pi";
 // Don't chnange 
-const Button = ({
-  children,
+export const Button = ({
+  childrens,
   loading = false,
   size
 }) => {
@@ -10,13 +11,13 @@ const Button = ({
     <div>
       {/* Button form material tailwind  */}
       <Mtbtn
-      //   styles
       size={size}
         
         loading={loading}
-        className={`bg-[#00C982] rounded  cursor-pointer `}
+        className={`bg-[#00C982] rounded flex items-center gap-3 cursor-pointer `}
       >
-        {children}
+        <PiHandbagBold className="text-2xl" />
+        {childrens}
       </Mtbtn>
     </div>
   );
@@ -24,7 +25,7 @@ const Button = ({
 
 // Prop validation 
 Button.propTypes = {
-  children: PropTypes.node.isRequired,
+  childrens: PropTypes.node.isRequired,
   loading: PropTypes.bool,
   size: PropTypes.string
 };
