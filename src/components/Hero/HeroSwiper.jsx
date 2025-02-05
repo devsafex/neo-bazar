@@ -6,6 +6,8 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination, Autoplay } from "swiper/modules";
 import { useEffect, useState } from "react";
+import Button from "../../Shaired/Button";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const HeroSwiper = () => {
   const [sliders, setSliders] = useState([]);
@@ -36,14 +38,14 @@ const HeroSwiper = () => {
               style={{ backgroundImage: `url(${slider?.bg_image})` }}
             >
               <div className=" text-start space-y-2">
-                <h1 className=" text-xl lg:text-2xl  font-thin">
+                <h1 className=" text-xl lg:text-2xl  font-thin text-gray-600">
                   {slider?.product_type}
                 </h1>
                 <h1 className=" text-xl lg:text-4xl  font-bold text-[#00C982]">
                   {slider?.title}
                 </h1>
                 <p>{slider?.offer}</p>
-                
+                 <Button>Shop now <FaArrowRightLong /></Button>
               </div>
             </div>
           </SwiperSlide>
