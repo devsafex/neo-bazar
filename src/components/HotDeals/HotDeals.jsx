@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import StarRatings from "react-star-ratings";
 import Button from "../../Shaired/Button";
 import heart from "../../assets/heart.png";
+import { IoIosArrowRoundForward } from "react-icons/io";
 
 const HotDeals = () => {
   //   const [deals, setDeals] = useState([]);
@@ -38,14 +39,17 @@ const HotDeals = () => {
 
   return (
     <div className="container mx-auto my-10 md:my-14 lg:my-20">
-      <h2 className="text-2xl font-bold mb-6">🔥 Deals Hot Of The Day</h2>
+      <div className="flex justify-between items-center font-bold">
+      <h2 className="text-2xl font-bold mb-6"> Deals Hot Of The Day</h2>
+      <p className="flex items-center gap-2">More Products <IoIosArrowRoundForward /></p>
+      </div>
 
       {/* First Two Big Items */}
       <div className="grid md:grid-cols-2 gap-6 mb-8">
         {sorted.slice(0, 2).map((deal) => (
           <div
             key={deal.id}
-            className="border flex gap-6 p-3 shadow-lg rounded-lg"
+            className="border border-[#00C982]/10 flex gap-6 p-3 rounded-lg"
           >
             
             <img
