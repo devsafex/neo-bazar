@@ -7,7 +7,7 @@ const Home = () => {
       return (
             <div className=" ">
                   {/* Hero secion  */}
-                  <div className=" my-14">
+                  <div className=" my-10">
                      <Hero/>   
                   </div>
 
