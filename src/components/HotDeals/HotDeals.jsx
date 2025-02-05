@@ -78,7 +78,7 @@ const HotDeals = () => {
               <p className="text-black/65 my-2 lg:my-4">{deal.description.slice(0,100)}...</p>
               <div className="flex gap-5 items-center">
                 <div>
-                  <Button size={"sm"}><PiHandbagBold className="text-2xl" />Select options</Button>
+                  <Button size={"sm"}><PiHandbagBold className="text-2xl" />Select options </Button>
                 </div>
                 <div className="">
                 <FaRegHeart className="text-2xl" />
