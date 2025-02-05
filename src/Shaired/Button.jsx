@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { Button as Mtbtn } from "@material-tailwind/react";
 
-// Don't chnange 
+
 export const Button = ({
   children,
   loading = false,
@@ -15,7 +15,6 @@ export const Button = ({
         loading={loading}
         className={`bg-[#00C982] rounded flex items-center gap-3 cursor-pointer `}
       >
-        
         {children}
       </Mtbtn>
     </div>
