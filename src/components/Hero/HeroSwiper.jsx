@@ -34,7 +34,7 @@ const HeroSwiper = () => {
         {sliders?.map((slider, idx) => (
           <SwiperSlide key={idx}>
             <div
-              className=" w-full h-[500px] bg-cover flex  justify-self-start p-4 md:p-8 items-center"
+              className=" w-full lg:h-[500px] bg-cover flex  justify-self-start p-4 md:p-8 items-center"
               style={{ backgroundImage: `url(${slider?.bg_image})` }}
             >
               <div className=" text-start space-y-2">
