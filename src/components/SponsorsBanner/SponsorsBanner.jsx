@@ -23,9 +23,9 @@ const SponsorsBanner = () => {
       
       {/* Right Side - Text and Button */}
       <div className="w-2/5 pl-10">
-        <p className="text-gray-500 text-sm uppercase tracking-wide">Happy Sunday</p>
-        <h2 className="text-6xl font-bold text-yellow-500">40% <span className="text-orange-500">OFF</span></h2>
-        <p className="text-xl font-semibold text-gray-800 mt-2">All Modern Furnitures</p>
+        <p className="text-gray-500 text-sm uppercase tracking-widest mb-4 relative e after:content-[''] after:w-12 after:h-[4px] after:bg-orange-500/60 after:rounded-2xl after:mb-1 after:inline-block after:ml-2 after:align-middle">Happy Sunday</p>
+        <h2 className="text-xl md:text-3xl lg:text-7xl font-bold text-orange-500/60">40% <br></br> <span className="text-orange-500/60">OFF</span></h2>
+        <p className="text-xl font-semibold text-gray-800 mt-1">All Modern Furnitures</p>
         
         {/* Countdown Timer Placeholder */}
         {/* <div className="flex justify-end text-gray-700 text-lg font-medium space-x-2 mt-4">
