@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import { Button as Mtbtn } from "@material-tailwind/react";
-import { PiHandbagBold } from "react-icons/pi";
-// Don't chnange 
+// Don't change 
 export const Button = ({
   children,
   loading = false,
