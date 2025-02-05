@@ -76,7 +76,7 @@ const HotDeals = () => {
               </p>
 
               <p className="text-green-600">{deal.discountPercentage}% OFF</p>
-              <p className="text-black/65 my-2 lg:my-4">{deal.description}</p>
+              <p className="text-black/65 my-2 lg:my-4">{deal.description.slice(0,100)}...</p>
               <div className="flex gap-5 items-center">
                 <div>
                   <Button size={"sm"} childrens={"Select options"}></Button>
@@ -118,7 +118,9 @@ const HotDeals = () => {
                 <span className="text-gray-500 line-through ml-2">
                   {deal.price}
                 </span>
+
               </p>
+              <p className="text-black/65  ">{deal.description.slice(0,30)}...</p>
             </div>
           </div>
         ))}
