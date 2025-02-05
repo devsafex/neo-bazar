@@ -47,10 +47,11 @@ const HotDeals = () => {
             key={deal.id}
             className="border flex gap-6 p-3 shadow-lg rounded-lg"
           >
+            
             <img
               src={deal.image}
               alt={deal.name}
-              className="w-40 h-40 md:p-10 lg:p-16 md:w-48 md:h-48 lg:w-80 lg:h-80 bg-[#00C982]/10 p-4 rounded object-contain"
+              className="w-40 h-40 md:p-10 md:w-48 md:h-48 lg:w-80 lg:h-80 bg-[#00C982]/10 p-4 rounded object-contain"
             />
             <div className="flex flex-col justify-center">
               <h3 className="text-lg font-semibold">{deal.name}</h3>
@@ -93,7 +94,7 @@ const HotDeals = () => {
             <img
               src={deal.image}
               alt={deal.name}
-              className="w-20 h-20 md:w-24 md:h-24"
+              className="w-20 h-20 md:w-28 md:h-24"
             />
             </div>
             <div className="flex flex-col justify-center">
