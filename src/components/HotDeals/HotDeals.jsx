@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
 import StarRatings from "react-star-ratings";
 import Button from "../../Shaired/Button";
-import heart from "../../assets/heart.png";
 import { IoIosArrowRoundForward } from "react-icons/io";
+import { FaRegHeart } from "react-icons/fa";
+import { PiHandbagBold } from "react-icons/pi";
 
 const HotDeals = () => {
-  //   const [deals, setDeals] = useState([]);
   const [sorted, setSorted] = useState([]);
-
   function calculateDiscount(originalPrice, discountPrice) {
     const original = parseFloat(originalPrice.replace("$", ""));
     const discount = parseFloat(discountPrice.replace("$", ""));
@@ -70,19 +69,19 @@ const HotDeals = () => {
                 />
                 <p className="text-black/55">({deal.reviews} reviews)</p>
               </div>
-              <p className="text-red-500 text-xl mt-2 font-bold">
+              <p className="text-gray-500 text-xl mt-2 font-bold">
                 {deal.discount_price}{" "}
-                <span className="text-gray-500 line-through">{deal.price}</span>
+                <span className="text-red-400 font-normal line-through">{deal.price}</span>
               </p>
 
               <p className="text-green-600">{deal.discountPercentage}% OFF</p>
               <p className="text-black/65 my-2 lg:my-4">{deal.description.slice(0,100)}...</p>
               <div className="flex gap-5 items-center">
                 <div>
-                  <Button size={"sm"} childrens={"Select options"}></Button>
+                  <Button size={"sm"}><PiHandbagBold className="text-2xl" />Select options</Button>
                 </div>
                 <div className="">
-                  <img className="h-5 w-5" src={heart} alt="" />
+                <FaRegHeart className="text-2xl" />
                 </div>
               </div>
             </div>
@@ -103,7 +102,7 @@ const HotDeals = () => {
             </div>
             <div className="flex flex-col justify-center">
               <h4 className="text-sm font-semibold mt-2">{deal.name}</h4>
-              <div className="">
+              <div>
                 <StarRatings
                   rating={deal.rating}
                   starRatedColor="gold"
