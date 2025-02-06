@@ -75,7 +75,7 @@ const HotDeals = () => {
             <img
               src={deal.image}
               alt={deal.name}
-              className="w-full h-40 md:p-10 md:h-48 lg:h-80 lg:w-48 xl:w-80 xl:h-80 bg-[#00C982]/10 p-4 rounded object-contain"
+              className="w-full h-40 md:p-10 md:h-48 lg:h-80 lg:w-48 xl:w-80 xl:h-80 bg-[#00C982]/5 p-4 rounded object-contain"
             />
           
             <div className="flex flex-col justify-center">
@@ -122,7 +122,7 @@ const HotDeals = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 items-center w-11/12 lg:w-full mx-auto">
         {sorted.slice(2).map((deal) => (
           <div key={deal.id} className="flex gap-3 rounded-lg">
-            <div className="h-32 bg-[#00C982]/10 flex items-center justify-center">
+            <div className="h-32 bg-[#00C982]/5 flex items-center justify-center">
               <img
                 src={deal.image}
                 alt={deal.name}

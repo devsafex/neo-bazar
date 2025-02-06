@@ -16,7 +16,8 @@ const SponsorsBanner = () => {
   }, []);
 
   return (
-    <div className="container mx-auto my-10 md:my-16 lg:my-20 flex items-center justify-between bg-white p-10 relative overflow-hidden">
+    <div className="bg-[#00C982]/5">
+        <div className="container mx-auto my-10 md:my-16 lg:my-20 flex items-center justify-between p-10 relative overflow-hidden">
       {/* Left Side - Image Section */}
       <div className="relative w-3/5 flex items-center">
         <img src={sponsorData.img} alt="Sponsor" className="w-full h-auto" />
@@ -36,6 +37,7 @@ const SponsorsBanner = () => {
           <Button className="bg-black text-white px-6 py-3 rounded-lg text-lg font-semibold">Shop Now</Button>
         </div>
       </div>
+    </div>
     </div>
   );
 };
