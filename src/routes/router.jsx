@@ -3,7 +3,6 @@ import Main from "../Layouts/Main";
 import Home from "../Pages/Home/Home";
 import Products from "../Pages/Products/Products";
 
-
 const router = createBrowserRouter([
       {
             path: '/' ,
