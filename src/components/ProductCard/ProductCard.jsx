@@ -4,6 +4,7 @@ import StarRatings from "react-star-ratings";
 import Button from "../../Shaired/Button";
 import { PiHandbagBold } from "react-icons/pi";
 import { FaRegHeart } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
   const discountPercentage = calculateDiscount(
@@ -13,15 +14,15 @@ const ProductCard = ({ product }) => {
   return (
     <div className=" p-6 bg-white rounded max-w-6xl ">
       <div className=" flex gap-4 ">
-        <div>
+        <Link to={`/product/${product.id}`}>
           <img className=" w-md object-contain" src={product?.image} alt="" />
-        </div>
+        </Link>
         <div>
-          <h1 className=" text-xl">{product?.name}</h1>
+          <Link to={`{/product/${product.id}}`} className=" text-xl hover:text-blue-950">{product?.name}</Link>
           <div>
-            <p className="text-gray-500 text-xl mt-2 font-bold">
+            <p className="text-gray-500 text-xl mt-2  font-bold">
               {product?.discount_price}
-              <span className="text-red-400 font-normal line-through">
+              <span className="text-red-400 font-normal ml-2 line-through">
                 {product?.price}
               </span>
             </p>
