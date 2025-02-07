@@ -4,15 +4,10 @@ import Button from "../../Shaired/Button";
 import { FaRegHeart } from "react-icons/fa";
 import { PiHandbagBold } from "react-icons/pi";
 import { Button as Mtbtn } from "@material-tailwind/react";
+import { calculateDiscount } from "../../utility/utility";
 
 const HotDeals = () => {
   const [sorted, setSorted] = useState([]);
-  function calculateDiscount(originalPrice, discountPrice) {
-    const original = parseFloat(originalPrice.replace("$", ""));
-    const discount = parseFloat(discountPrice.replace("$", ""));
-    const discountPercentage = ((original - discount) / original) * 100;
-    return parseFloat(discountPercentage.toFixed(2));
-  }
 
   useEffect(() => {
     fetch("/deals.json")
