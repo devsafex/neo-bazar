@@ -21,7 +21,7 @@ const SponsorsBanner = () => {
       {/* Left Side - Image Section */}
       <div className="relative flex items-center col-span-1 md:col-span-3">
         <img src={sponsorData.img} alt="Sponsor" className="w-full h-auto" />
-      </div>
+      </div> 
       
       {/* Right Side - Text and Button */}
       <div className="pl-0 md:pl-10 col-span-1 md:col-span-2">
