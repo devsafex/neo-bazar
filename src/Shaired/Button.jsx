@@ -1,7 +1,11 @@
 import PropTypes from "prop-types";
 import { Button as Mtbtn } from "@material-tailwind/react";
+<<<<<<< HEAD
+// Don't change 
+=======
 
 
+>>>>>>> 73087b36032cedea1ca3096a5a1518a7ba3e00bb
 export const Button = ({
   children,
   loading = false,

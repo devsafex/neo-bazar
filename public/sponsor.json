@@ -1,0 +1,15 @@
+{
+  "img": "https://i.imgur.com/tMviexu.png",
+  "slogan": "HAPPY SUNDAY",
+
+  "discount": "40% OFF",
+
+  "items": "All Modern Furnitures",
+
+  "countdown": {
+    "days": 281,
+    "hours": 23,
+    "minutes": 54,
+    "seconds": 45
+  }
+}

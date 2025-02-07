@@ -34,11 +34,10 @@ const HotDeals = () => {
       })
       .catch((error) => console.error("Error loading JSON:", error));
   }, []);
-  console.log(sorted);
 
   return (
     <div className="container mx-auto my-10 md:my-14 lg:my-20">
-      <div className="flex flex-col md:flex-row justify-between items-center font-bold mb-6 w-11/12 mx-auto">
+      <div className="flex flex-col md:flex-row justify-between items-center font-bold mb-6 w-11/12 lg:w-full mx-auto">
         <h2 className="text-2xl font-bold mb-6 md:mb-0">
           Deals Hot Of The Day
         </h2>
@@ -67,7 +66,7 @@ const HotDeals = () => {
       </div>
 
       {/* First Two Big Items */}
-      <div className="grid  md:grid-cols-2 gap-6 mb-8 w-11/12 mx-auto">
+      <div className="grid  md:grid-cols-2 gap-6 mb-8 w-11/12 lg:w-full mx-auto">
         {sorted.slice(0, 2).map((deal) => (
           <div
             key={deal.id}
@@ -76,10 +75,9 @@ const HotDeals = () => {
             <img
               src={deal.image}
               alt={deal.name}
-              className="w-full h-40 md:p-10 md:h-48 lg:w-80 lg:h-80 bg-[#00C982]/10 p-4 rounded object-contain"
+              className="w-full h-40 md:p-10 md:h-48 lg:h-80 lg:w-48 xl:w-80 xl:h-80 bg-[#00C982]/5 p-4 rounded object-contain"
             />
-            {/* w-full h-40 md:p-10 md:h-48 lg:w-80 lg:h-80 bg-[#00C982]/10 p-4 rounded object-contain */}
-            {/* w-40 h-40 md:p-10 md:w-48 md:h-48 lg:w-80 lg:h-80 bg-[#00C982]/10 p-4 rounded object-contain */}
+          
             <div className="flex flex-col justify-center">
               <h3 className="text-lg font-semibold">{deal.name}</h3>
               <div className="flex gap-3">
@@ -121,10 +119,10 @@ const HotDeals = () => {
       </div>
 
       {/* Smaller Items in Grid Below */}
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 items-center w-11/12 mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 items-center w-11/12 lg:w-full mx-auto">
         {sorted.slice(2).map((deal) => (
           <div key={deal.id} className="flex gap-3 rounded-lg">
-            <div className="h-32 bg-[#00C982]/10 flex items-center justify-center">
+            <div className="h-32 bg-[#00C982]/5 flex items-center justify-center">
               <img
                 src={deal.image}
                 alt={deal.name}
