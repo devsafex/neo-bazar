@@ -32,7 +32,8 @@ const SponsorsBanner = () => {
         <CountDown time="2025-02-13T23:59:59"></CountDown>
       
         
-        {/* Shop Now Button */}
+        {/* Shop Now Button */} 
+        
         <div className="mt-6">
           <Button className="bg-black text-white px-6 py-3 rounded-lg text-lg font-semibold">Shop Now</Button>
         </div>
