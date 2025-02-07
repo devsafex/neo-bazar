@@ -9,7 +9,7 @@ const Main = () => {
         <Nav></Nav>
       </div>
       {/* Outlet  */}
-      <div className=" min-h-[100vh]">
+      <div className="min-h-[100vh]">
         <Outlet />
       </div>
       {/* Footer  */}

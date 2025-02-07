@@ -6,6 +6,7 @@ import {
   IconButton,
 } from "@material-tailwind/react";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navlinks = () => {
   const [openNav, setOpenNav] = useState(false);
@@ -65,7 +66,7 @@ const Navlinks = () => {
         className="p-1 font-normal"
       >
         <a href="#" className="flex items-center">
-        Become a seller
+          Become a seller
         </a>
       </Typography>
       <Typography
@@ -75,7 +76,7 @@ const Navlinks = () => {
         className="p-1 font-normal"
       >
         <a href="#" className="flex items-center">
-        Dashboard
+          Dashboard
         </a>
       </Typography>
     </ul>
@@ -151,12 +152,16 @@ const Navlinks = () => {
         <MobileNav open={openNav}>
           {navList}
           <div className="flex items-center gap-x-1">
-            <Button fullWidth variant="text" size="sm" className="">
-              <span>Log In</span>
-            </Button>
-            <Button fullWidth size="sm" className=" bg-[#00C982] rounded">
-              <span>Sign Up</span>
-            </Button>
+            <Link to={"/login"}>
+              <Button fullWidth variant="text" size="sm" className="">
+                <span>Log In</span>
+              </Button>
+            </Link>
+            <Link to={"/register"}>
+              <Button fullWidth size="sm" className=" bg-[#00C982] rounded">
+                <span>Sign Up</span>
+              </Button>
+            </Link>
           </div>
         </MobileNav>
       </Navbar>
