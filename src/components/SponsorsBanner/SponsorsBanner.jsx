@@ -29,7 +29,7 @@ const SponsorsBanner = () => {
         <h2 className="text-2xl md:text-4xl lg:text-6xl xl:text-7xl font-bold text-orange-500/60">40% <br className="hidden md:block"/> <span className="text-orange-500/60">OFF</span></h2>
         <p className="text-xl font-semibold text-gray-800 mt-1">All Modern Furnitures</p>
         {/* Countdown Timer Placeholder */}
-        <CountDown time="2025-02-08T06:20:00"></CountDown>
+        <CountDown time="2025-02-13T23:59:59"></CountDown>
       
         
         {/* Shop Now Button */}
