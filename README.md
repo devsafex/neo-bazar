@@ -1,1 +1,1 @@
-Primary color- #00C982
+  Primary color- #00C982
