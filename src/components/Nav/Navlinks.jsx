@@ -96,19 +96,23 @@ const Navlinks = () => {
           <div className="flex items-center gap-4">
             <div className="mr-4 hidden lg:block">{navList}</div>
             <div className="flex items-center gap-x-1">
-              <Button
-                variant="text"
-                size="sm"
-                className="hidden lg:inline-block"
-              >
-                <span>Log In</span>
-              </Button>
-              <Button
-                size="sm"
-                className="hidden lg:inline-block bg-[#00C982] rounded"
-              >
-                <span>Sign in</span>
-              </Button>
+              <Link to={'/login'}>
+                <Button
+                  variant="text"
+                  size="sm"
+                  className="hidden lg:inline-block"
+                >
+                  <span>Log In</span>
+                </Button>
+              </Link>
+              <Link to={'/register'}>
+                <Button
+                  size="sm"
+                  className="hidden lg:inline-block bg-[#00C982] rounded"
+                >
+                  <span>Sign in</span>
+                </Button>
+              </Link>
             </div>
             <IconButton
               variant="text"
