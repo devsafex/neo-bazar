@@ -109,12 +109,12 @@ const Navlinks = () => {
                   <span>Log In</span>
                 </Button>
               </Link>
-              <Link to={'/register'}>
+              <Link to={'/signup'}>
               <Button
                 size="sm"
                 className="hidden lg:inline-block bg-[#00C982] rounded"
               >
-                <span>Sign in</span>
+                <span>Sign Up</span>
               </Button>
             </Link></>
               }

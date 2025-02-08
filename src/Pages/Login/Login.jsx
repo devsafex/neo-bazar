@@ -1,7 +1,8 @@
 import { useAuth0 } from "@auth0/auth0-react";
+import { CgSpinnerAlt } from "react-icons/cg";
 
 const Login = () => {
-  const { user, loginWithRedirect, isAuthenticated, logout } = useAuth0();
+  const { user, loginWithRedirect, isAuthenticated, logout, isLoading  } = useAuth0();
   console.log(user);
 
   return (
@@ -10,8 +11,8 @@ const Login = () => {
         <h2 className="text-3xl font-bold text-[#00C982]">Welcome Back</h2>
         <p className="text-gray-400 mt-2">Login to continue</p>
 
-        {isAuthenticated ? (
-          <button onClick={() => logout()}>LOGOUT</button>
+        {isAuthenticated ? ( 
+          <button onClick={() => logout()}>{isLoading ? <CgSpinnerAlt className="animate-spin m-auto" />:'LOGOUT'}</button>
         ) : (
           <button
             onClick={() => loginWithRedirect()}
