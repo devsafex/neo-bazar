@@ -1,3 +1,4 @@
+import { useAuth0 } from "@auth0/auth0-react";
 import {
   Navbar,
   MobileNav,
@@ -9,6 +10,8 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const Navlinks = () => {
+  const { isAuthenticated, logout } = useAuth0();
+
   const [openNav, setOpenNav] = useState(false);
   useEffect(() => {
     window.addEventListener(
@@ -96,7 +99,8 @@ const Navlinks = () => {
           <div className="flex items-center gap-4">
             <div className="mr-4 hidden lg:block">{navList}</div>
             <div className="flex items-center gap-x-1">
-              <Link to={'/login'}>
+              {
+                !isAuthenticated && <><Link to={'/login'}>
                 <Button
                   variant="text"
                   size="sm"
@@ -106,13 +110,23 @@ const Navlinks = () => {
                 </Button>
               </Link>
               <Link to={'/register'}>
-                <Button
-                  size="sm"
-                  className="hidden lg:inline-block bg-[#00C982] rounded"
-                >
-                  <span>Sign in</span>
-                </Button>
-              </Link>
+              <Button
+                size="sm"
+                className="hidden lg:inline-block bg-[#00C982] rounded"
+              >
+                <span>Sign in</span>
+              </Button>
+            </Link></>
+              }
+              {
+                isAuthenticated &&  <Button
+                size="sm"
+                className="hidden lg:inline-block bg-[#00C982] rounded"
+              >
+                <button onClick={()=>logout()}>Logout</button>
+              </Button>
+              }
+              
             </div>
             <IconButton
               variant="text"
