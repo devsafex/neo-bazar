@@ -3,6 +3,7 @@ import { FcGoogle } from "react-icons/fc";
 import { CgSpinnerAlt } from "react-icons/cg";
 import { useState } from "react";
 import useAuth from "../../hooks/useAuth";
+import toast from "react-hot-toast";
 
 const Login = () => {
   const { signIn, signInWithGoogle, loading, setLoading, setUser } = useAuth();
@@ -20,6 +21,17 @@ const Login = () => {
       const res = await signIn(email, password);
       setUser(res?.user);
       navigate("/", { replace: true });
+      toast.success('Successfully logged in.', {
+        style: {
+          border: '1px solid #00C982',
+          padding: '16px',
+          color: '#00C982',
+        },
+        iconTheme: {
+          primary: '#00C982',
+          secondary: '#FFFAEE',
+        },
+      });
     } catch (err) {
       setLoading(false);
       setError(err?.message);
@@ -30,6 +42,17 @@ const Login = () => {
     try {
       await signInWithGoogle();
       navigate("/", { replace: true });
+      toast.success('Successfully logged in.', {
+        style: {
+          border: '1px solid #00C982',
+          padding: '16px',
+          color: '#00C982',
+        },
+        iconTheme: {
+          primary: '#00C982',
+          secondary: '#FFFAEE',
+        },
+      });
     } catch (err) {
       setLoading(false);
       setError(err?.message);
@@ -69,7 +92,7 @@ const Login = () => {
           <p>Continue with Google</p>
         </div>
         <p className="px-6 text-sm text-center text-gray-400">
-          Don't have an account yet? <Link to="/signup" className="hover:underline hover:text-[#00C982] font-bold text-gray-600">Sign up</Link>.
+          Don&apos;t have an account yet? <Link to="/signup" className="hover:underline hover:text-[#00C982] font-bold text-gray-600">Sign up</Link>.
         </p>
       </div>
     </div>

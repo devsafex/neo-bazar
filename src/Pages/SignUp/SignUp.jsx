@@ -6,6 +6,7 @@ import { FcGoogle } from "react-icons/fc";
 import { useState } from "react";
 import { CgSpinnerAlt } from "react-icons/cg";
 import useAuth from "../../hooks/useAuth";
+import toast from "react-hot-toast";
 
 const SignUp = () => {
   
@@ -40,6 +41,17 @@ const navigate = useNavigate()
     try {
       await createUser(email, password);
       navigate('/')
+      toast.success('Successfully signed up.', {
+        style: {
+          border: '1px solid #00C982',
+          padding: '16px',
+          color: '#00C982',
+        },
+        iconTheme: {
+          primary: '#00C982',
+          secondary: '#FFFAEE',
+        },
+      });
     } catch (error) {
       setLoading(false)
       console.log(error?.message)
@@ -51,6 +63,17 @@ const navigate = useNavigate()
     try {
       await signInWithGoogle();
       navigate('/')
+      toast.success('Successfully signed up.', {
+        style: {
+          border: '1px solid #00C982',
+          padding: '16px',
+          color: '#00C982',
+        },
+        iconTheme: {
+          primary: '#00C982',
+          secondary: '#FFFAEE',
+        },
+      });
     } catch (error) {
       setLoading(false)
       console.log(error?.message)
