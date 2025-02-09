@@ -1,3 +1,4 @@
+import { useAuth0 } from "@auth0/auth0-react";
 import {
   Navbar,
   MobileNav,
@@ -6,8 +7,11 @@ import {
   IconButton,
 } from "@material-tailwind/react";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navlinks = () => {
+  const { isAuthenticated, logout } = useAuth0();
+
   const [openNav, setOpenNav] = useState(false);
   useEffect(() => {
     window.addEventListener(
@@ -65,7 +69,7 @@ const Navlinks = () => {
         className="p-1 font-normal"
       >
         <a href="#" className="flex items-center">
-        Become a seller
+          Become a seller
         </a>
       </Typography>
       <Typography
@@ -75,7 +79,7 @@ const Navlinks = () => {
         className="p-1 font-normal"
       >
         <a href="#" className="flex items-center">
-        Dashboard
+          Dashboard
         </a>
       </Typography>
     </ul>
@@ -95,19 +99,34 @@ const Navlinks = () => {
           <div className="flex items-center gap-4">
             <div className="mr-4 hidden lg:block">{navList}</div>
             <div className="flex items-center gap-x-1">
-              <Button
-                variant="text"
-                size="sm"
-                className="hidden lg:inline-block"
-              >
-                <span>Log In</span>
-              </Button>
+              {
+                !isAuthenticated && <><Link to={'/login'}>
+                <Button
+                  variant="text"
+                  size="sm"
+                  className="hidden lg:inline-block"
+                >
+                  <span>Log In</span>
+                </Button>
+              </Link>
+              <Link to={'/signup'}>
               <Button
                 size="sm"
                 className="hidden lg:inline-block bg-[#00C982] rounded"
               >
-                <span>Sign in</span>
+                <span>Sign Up</span>
               </Button>
+            </Link></>
+              }
+              {
+                isAuthenticated &&  <Button
+                size="sm"
+                className="hidden lg:inline-block bg-[#00C982] rounded"
+              >
+                <button onClick={()=>logout()}>Logout</button>
+              </Button>
+              }
+              
             </div>
             <IconButton
               variant="text"
@@ -151,12 +170,16 @@ const Navlinks = () => {
         <MobileNav open={openNav}>
           {navList}
           <div className="flex items-center gap-x-1">
-            <Button fullWidth variant="text" size="sm" className="">
-              <span>Log In</span>
-            </Button>
-            <Button fullWidth size="sm" className=" bg-[#00C982] rounded">
-              <span>Sign Up</span>
-            </Button>
+            <Link to={"/login"}>
+              <Button fullWidth variant="text" size="sm" className="">
+                <span>Log In</span>
+              </Button>
+            </Link>
+            <Link to={"/register"}>
+              <Button fullWidth size="sm" className=" bg-[#00C982] rounded">
+                <span>Sign Up</span>
+              </Button>
+            </Link>
           </div>
         </MobileNav>
       </Navbar>
