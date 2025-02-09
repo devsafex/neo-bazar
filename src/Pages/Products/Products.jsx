@@ -1,3 +1,4 @@
+import { Checkbox, Option, Select } from "@material-tailwind/react";
 import ProductCard from "../../components/ProductCard/ProductCard";
 
 const Products = () => {
@@ -17,8 +18,30 @@ const Products = () => {
   return (
     <div className=" bg-[#00C982]/5 min-h-screen">
       <div className="  container mx-auto h-full w-11/12 md:w-full">
-        <div className=" md:grid grid-cols-12 pt-6 gap-5 h-full ">
-          <div className=" col-span-3 xl:col-span-2 h-full bg-amber-200"></div>
+        <div className=" py-4 w-full flex items-center justify-between border-b-2
+         border-b-[#00C982]/10 mb-3">
+          <div className=" text-xl">All items</div>
+          <div>
+            <div className="w-fit">
+              <Select className=" p-0 " label="Sort by">
+                <Option>Price : Low to high</Option>
+                <Option>Price : High to low</Option>
+                <Option>Newest Arrivals</Option>
+                <Option>Avg. Customer Review</Option>
+               
+              </Select>
+            </div>
+          </div>
+        </div>
+        <div className=" md:grid grid-cols-12  gap-5 h-full ">
+          <div className=" col-span-3 xl:col-span-2 h-full ">
+            {/* filterr  */}
+            <div >
+              <div className="  flex items-center "><Checkbox /> Free delivery</div>
+              <div className=" flex items-center "><Checkbox /> Cash on delivery</div>
+            </div>
+            {/* <div className=" border-b-2 border-b-[#00C982]/10 my-2"></div> */}
+          </div>
           <div className=" col-span-9 xl:col-span-10 h-full space-y-3">
             <ProductCard product={gamingLaptop} />
             <ProductCard product={gamingLaptop} />
