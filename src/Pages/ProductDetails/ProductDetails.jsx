@@ -4,6 +4,7 @@ import { FaBox, FaRegHeart } from "react-icons/fa6";
 import StarRatings from "react-star-ratings";
 import { calculateDiscount } from "../../utility/utility";
 import ImageZoom from "react-image-magnifier-zoom";
+import { ScrollRestoration } from "react-router-dom";
 const product = {
   id: 1,
   name: "ASUS ROG Strix G16",
@@ -24,6 +25,7 @@ const ProductDetails = () => {
   );
   return (
     <div>
+      <ScrollRestoration/>
       <div className=" container mx-auto pt-7">
         <div className=" flex gap-5 items-start">
           <div className=" w-7xl z-50" id="img-div-details-page">

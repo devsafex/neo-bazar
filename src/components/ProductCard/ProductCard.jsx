@@ -34,7 +34,7 @@ const ProductCard = ({ product }) => {
 
             <p className="text-green-600">{discountPercentage}% OFF</p>
           </div>
-          <div className="flex gap-3">
+          <div className="flex gap-1 xl:gap-3">
             <StarRatings
               rating={product.rating}
               starRatedColor="gold"
@@ -45,7 +45,7 @@ const ProductCard = ({ product }) => {
             />
             <p className="text-black/55">({product.reviews} reviews)</p>
           </div>
-          <p className="text-black/65 my-2 lg:my-4 text-xs lg:text-sm">
+          <p className="text-black/65 my-2 xl:my-4 text-xs lg:text-sm">
             {product.description.slice(0, 200)}...
           </p>
           <div className="flex gap-5 items-center">
