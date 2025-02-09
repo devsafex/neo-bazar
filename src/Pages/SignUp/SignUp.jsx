@@ -1,7 +1,14 @@
 import { useAuth0 } from "@auth0/auth0-react";
 
-const Signup = () => {
+const SignUp = () => {
   const { loginWithRedirect } = useAuth0();
+
+  const handleSignup = () => {
+    loginWithRedirect({
+      screen_hint: "signup", // This will force the signup screen
+      redirect_uri: window.location.origin, // Optional: to specify where to redirect after successful login/signup
+    });
+  };
 
   return (
     <div className="flex items-center justify-center h-screen bg-gray-100">
@@ -9,7 +16,7 @@ const Signup = () => {
         <h2 className="text-2xl font-bold text-gray-800 text-center mb-6">Create Account</h2>
         
         <button 
-          onClick={() => loginWithRedirect({ screen_hint: "signup" })} 
+          onClick={handleSignup} 
           className="w-full flex items-center justify-center space-x-2 bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg shadow">
           <span>Sign Up with Auth0</span>
         </button>
@@ -18,4 +25,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default SignUp;
