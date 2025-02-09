@@ -50,6 +50,7 @@ const navigate = useNavigate()
   const handleGoogleSignIn = async () => {
     try {
       await signInWithGoogle();
+      navigate('/')
     } catch (error) {
       setLoading(false)
       console.log(error?.message)

@@ -8,9 +8,10 @@ import {
 } from "@material-tailwind/react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
 
 const Navlinks = () => {
-  const { isAuthenticated, logout } = useAuth0();
+   const { user, logOut } = useAuth();
 
   const [openNav, setOpenNav] = useState(false);
   useEffect(() => {
@@ -100,7 +101,7 @@ const Navlinks = () => {
             <div className="mr-4 hidden lg:block">{navList}</div>
             <div className="flex items-center gap-x-1">
               {
-                !isAuthenticated && <><Link to={'/login'}>
+                !user && <><Link to={'/login'}>
                 <Button
                   variant="text"
                   size="sm"
@@ -119,11 +120,11 @@ const Navlinks = () => {
             </Link></>
               }
               {
-                isAuthenticated &&  <Button
+                user &&  <Button
                 size="sm"
                 className="hidden lg:inline-block bg-[#00C982] rounded"
               >
-                <button onClick={()=>logout()}>Logout</button>
+                <button onClick={logOut}>Logout</button>
               </Button>
               }
               
