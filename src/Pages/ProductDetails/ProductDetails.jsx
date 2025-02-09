@@ -25,22 +25,23 @@ const ProductDetails = () => {
   );
   return (
     <div>
-      <ScrollRestoration/>
-      <div className=" container mx-auto pt-7">
-        <div className=" flex gap-5 items-start">
-          <div className=" w-7xl z-50" id="img-div-details-page">
+      <ScrollRestoration />
+      <div className=" container mx-auto pt-7 w-11/12 lg:w-full">
+        <div className=" flex gap-5 items-start flex-col md:flex-row">
+          <div className=" md:w-7xl z-50" id="img-div-details-page">
             {" "}
-            <ImageZoom
-             
-              src={product?.image}
-              
-              width={400}
-               height={400}
-              magnifierSize={100}
-              zoomLevel={3}
-            //   enabled={true}
-            />
-            {/* <img className=" w-full" src={product?.image} alt="" /> */}
+            <div className=" hidden lg:block">
+              <ImageZoom
+                src={product?.image}
+                width={400}
+                height={400}
+                magnifierSize={100}
+                zoomLevel={3}
+                //   enabled={true}
+              />
+            </div>
+
+            <img className=" w-full lg:hidden" src={product?.image} alt="" />
           </div>
           <div>
             <h1 className=" text-2xl font-bold">{product?.name}</h1>
@@ -65,19 +66,19 @@ const ProductDetails = () => {
               />
               <p className="text-black/55">({product.reviews} reviews)</p>
             </div>
-            <p className="text-black/65 my-2 lg:my-4 text-lg">
+            <p className="text-black/65 my-2 lg:my-4  xl:text-lg ">
               {product.description}
             </p>
             <div className="flex gap-5 items-center">
               <div>
                 <Button size={"sm"}>
-                  <PiHandbagBold className="text-2xl" />
+                  <PiHandbagBold className=" text-lg md:text-2xl" />
                   Add to cart
                 </Button>
               </div>
               <div>
                 <Button size={"sm"}>
-                  <FaBox className="text-2xl" />
+                  <FaBox className="text-lg md:text-2xl" />
                   Buy now
                 </Button>
               </div>
