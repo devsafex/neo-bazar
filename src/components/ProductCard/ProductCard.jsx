@@ -5,12 +5,17 @@ import Button from "../../Shaired/Button";
 import { PiHandbagBold } from "react-icons/pi";
 import { FaRegHeart } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { setItemToLocal } from "../../utility/localStroge";
 
 const ProductCard = ({ product }) => {
   const discountPercentage = calculateDiscount(
     product.price,
     product.discount_price
   );
+
+  const addToCart = () =>{
+      setItemToLocal('cart',product)
+  }
   return (
     <div className=" p-6 bg-white rounded max-w-6xl ">
       <div className=" flex gap-4 ">
@@ -44,8 +49,12 @@ const ProductCard = ({ product }) => {
             {product.description.slice(0, 200)}...
           </p>
           <div className="flex gap-5 items-center">
-            <div>
-              <Button size={"sm"}>
+            <div 
+              onClick={addToCart}
+             >
+              <Button 
+              
+              size={"sm"}>
                 <PiHandbagBold className="text-2xl" />
                 Add to cart
               </Button>

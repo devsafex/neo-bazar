@@ -1,17 +1,14 @@
 const getItemFromLocal = (key) => {
-  const localItem = JSON.parse(localStorage.getItem(key));
-  return localItem;
+  return JSON.parse(localStorage.getItem(key)) || [];
 };
+
 const setItemToLocal = (key, item) => {
-      let localItems = getItemFromLocal(key);
-      const existingItem = localItems.find((localItem) => localItem === item);
-      if (existingItem) {
-        return;
-      } else {
-        localItems.push(item);
-        localStorage.setItem(key, localItems);
-      }
-    };
-    
-    export { getItemFromLocal, setItemToLocal };
-    
+  let localItems = getItemFromLocal(key);
+
+  if (!localItems.includes(item)) {
+    localItems.push(item);
+    localStorage.setItem(key, JSON.stringify(localItems));
+  }
+};
+
+export { getItemFromLocal, setItemToLocal };
