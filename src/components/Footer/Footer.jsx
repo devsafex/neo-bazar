@@ -2,7 +2,7 @@
 const Footer = () => {
       return (
             <div className="">
-                  hiiii footer
+             hit footer
             </div>
       );
 };

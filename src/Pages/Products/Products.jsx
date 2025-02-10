@@ -34,7 +34,7 @@ const Products = () => {
           </div>
         </div>
         <div className=" md:grid grid-cols-12  gap-5 h-full ">
-          <div className=" col-span-3 xl:col-span-2 h-full ">
+          <div className=" col-span-3 xl:col-span-2 h-full "> 
             {/* filterr  */}
             <div >
               <div className="  flex items-center "><Checkbox /> Free delivery</div>
