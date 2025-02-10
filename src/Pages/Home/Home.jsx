@@ -1,3 +1,4 @@
+import AllCategory from "../../components/AllCategory/AllCategory";
 import Hero from "../../components/Hero/Hero";
 import HotDeals from "../../components/HotDeals/HotDeals";
 import SponsorsBanner from "../../components/SponsorsBanner/SponsorsBanner";
@@ -7,6 +8,8 @@ const Home = () => {
 
   return (
     <div className=" ">
+      {/* all category section  */}
+      <AllCategory />
       {/* Hero secion  */}
       <div className=" my-10">
         <Hero />

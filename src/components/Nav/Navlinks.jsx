@@ -65,7 +65,7 @@ const Navlinks = () => {
         className="p-1 font-normal"
       >
         <a href="#" className="flex items-center">
-        Become a seller
+          Become a seller
         </a>
       </Typography>
       <Typography
@@ -75,7 +75,7 @@ const Navlinks = () => {
         className="p-1 font-normal"
       >
         <a href="#" className="flex items-center">
-        Dashboard
+          Dashboard
         </a>
       </Typography>
     </ul>
