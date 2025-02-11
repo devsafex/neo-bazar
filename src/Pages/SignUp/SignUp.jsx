@@ -1,8 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
-// import useAuth from "../../hooks/useAuth";
-// import { toast } from "react-hot-toast";
-// import { imageUpload, saveUser } from "../../utilities/utils";
 import { useState } from "react";
 import { CgSpinnerAlt } from "react-icons/cg";
 import useAuth from "../../hooks/useAuth";
@@ -85,12 +82,10 @@ const navigate = useNavigate()
       <div className="flex flex-col max-w-md p-6 rounded-md sm:p-10 bg-[#00C982]/5 text-gray-900">
         <div className="mb-8 text-center">
           <h1 className="my-3 text-4xl font-bold">Sign Up</h1>
-          <p className="text-sm text-gray-400">Welcome to Neo Bazar</p>
+          <p className="text-sm text-gray-400">Join us today! It only takes a few steps</p>
         </div>
         <form
           onSubmit={handleSubmit}
-          noValidate=""
-          action=""
           className="space-y-6 ng-untouched ng-pristine ng-valid"
         >
           <div className="space-y-4">
@@ -103,7 +98,7 @@ const navigate = useNavigate()
                 name="name"
                 id="name"
                 placeholder="Enter Your Name Here"
-                className="w-full px-3 py-2 input input-bordered focus:outline-[#00C982] text-gray-900"
+                className="w-full px-3 py-2 border border-slate-200 focus:outline-[#00C982] text-gray-900"
                 data-temp-mail-org="0"
               />
             </div>
@@ -117,23 +112,11 @@ const navigate = useNavigate()
                 id="email"
                 required
                 placeholder="Enter Your Email Here"
-                className="w-full px-3 py-2 input input-bordered focus:outline-[#00C982] text-gray-900"
+                className="w-full px-3 py-2 border border-slate-200 focus:outline-[#00C982] text-gray-900"
                 data-temp-mail-org="0"
               />
             </div>
-            <div>
-              <label htmlFor="image" className="block mb-2 text-sm">
-                Select Image:
-              </label>
-              <input
-                required
-                type="file"
-                id="image"
-                name="image"
-                accept="image/*"
-              />
-            </div>
-           
+            
             <div>
               <div className="flex justify-between">
                 <label htmlFor="password" className="text-sm mb-2">
@@ -147,7 +130,7 @@ const navigate = useNavigate()
                 id="password"
                 required
                 placeholder="*******"
-                className="w-full px-3 py-2 border input input-bordered rounded-md focus:outline-[#00C982] text-gray-900"
+                className="w-full px-3 py-2 border border-slate-200 rounded-md focus:outline-[#00C982] text-gray-900"
               />
             </div>
             {error && <p className="mb-2 text-red-500 text-sm">{error}</p>}
@@ -169,20 +152,19 @@ const navigate = useNavigate()
 
         <div
           onClick={handleGoogleSignIn}
-          className="flex justify-center border-[#00C982] items-center space-x-2  border my-3 p-2 rounded-lg cursor-pointer"
+          className="flex justify-center border-slate-200 items-center space-x-2  border my-3 p-2 rounded-lg cursor-pointer"
         >
           <FcGoogle size={32} />
           <p>Continue with Google</p>
         </div>
-        <p className="px-6 text-sm text-center text-gray-400">
-          Already have an account?
+        <p className="px-6 text-sm text-center text-gray-500">
+          Already have an account? 
           <Link
             to="/login"
-            className="hover:underline hover:text-[#00C982] font-bold text-gray-600"
-          >
+            className="hover:underline ml-1 hover:text-[#00C982] font-medium text-black"
+          > 
             Login
           </Link>
-          .
         </p>
       </div>
     </div>
