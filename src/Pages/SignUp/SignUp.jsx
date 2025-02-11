@@ -6,19 +6,17 @@ import useAuth from "../../hooks/useAuth";
 import toast from "react-hot-toast";
 
 const SignUp = () => {
-  
   const [error, setError] = useState("");
-  const { createUser, signInWithGoogle, loading, setLoading } =
-    useAuth();
-const navigate = useNavigate()
+  const { createUser, signInWithGoogle, loading, setLoading } = useAuth();
+  const navigate = useNavigate();
   const handleSubmit = async (event) => {
     event.preventDefault();
-    setError('')  
+    setError("");
     const form = event.target;
-    const name = form.name.value;
+    // const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
-    
+
     if (password.length < 6) {
       setError("Length must be at least 6 character ");
     }
@@ -34,24 +32,24 @@ const navigate = useNavigate()
       setError("Password must contain at least one digit");
       return;
     }
-    
+
     try {
       await createUser(email, password);
-      navigate('/')
-      toast.success('Successfully signed up.', {
+      navigate("/");
+      toast.success("Successfully signed up.", {
         style: {
-          border: '1px solid #00C982',
-          padding: '16px',
-          color: '#00C982',
+          border: "1px solid #00C982",
+          padding: "16px",
+          color: "#00C982",
         },
         iconTheme: {
-          primary: '#00C982',
-          secondary: '#FFFAEE',
+          primary: "#00C982",
+          secondary: "#FFFAEE",
         },
       });
     } catch (error) {
-      setLoading(false)
-      console.log(error?.message)
+      setLoading(false);
+      console.log(error?.message);
     }
   };
 
@@ -59,30 +57,31 @@ const navigate = useNavigate()
   const handleGoogleSignIn = async () => {
     try {
       await signInWithGoogle();
-      navigate('/')
-      toast.success('Successfully signed up.', {
+      navigate("/");
+      toast.success("Successfully signed up.", {
         style: {
-          border: '1px solid #00C982',
-          padding: '16px',
-          color: '#00C982',
+          border: "1px solid #00C982",
+          padding: "16px",
+          color: "#00C982",
         },
         iconTheme: {
-          primary: '#00C982',
-          secondary: '#FFFAEE',
+          primary: "#00C982",
+          secondary: "#FFFAEE",
         },
       });
     } catch (error) {
-      setLoading(false)
-      console.log(error?.message)
+      setLoading(false);
+      console.log(error?.message);
     }
   };
   return (
     <div className="flex flex-col lg:flex-row gap-20 my-10 md:my-16  justify-center items-center  ">
-     
       <div className="flex flex-col max-w-md p-6 rounded-md sm:p-10 bg-[#00C982]/5 text-gray-900">
         <div className="mb-8 text-center">
           <h1 className="my-3 text-4xl font-bold">Sign Up</h1>
-          <p className="text-sm text-gray-400">Join us today! It only takes a few steps</p>
+          <p className="text-sm text-gray-400">
+            Join us today! It only takes a few steps
+          </p>
         </div>
         <form
           onSubmit={handleSubmit}
@@ -116,7 +115,7 @@ const navigate = useNavigate()
                 data-temp-mail-org="0"
               />
             </div>
-            
+
             <div>
               <div className="flex justify-between">
                 <label htmlFor="password" className="text-sm mb-2">
@@ -158,11 +157,11 @@ const navigate = useNavigate()
           <p>Continue with Google</p>
         </div>
         <p className="px-6 text-sm text-center text-gray-500">
-          Already have an account? 
+          Already have an account?
           <Link
             to="/login"
             className="hover:underline ml-1 hover:text-[#00C982] font-medium text-black"
-          > 
+          >
             Login
           </Link>
         </p>
