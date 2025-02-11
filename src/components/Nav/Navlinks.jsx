@@ -5,13 +5,13 @@ import {
   Button,
   IconButton,
 } from "@material-tailwind/react";
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 
 const Navlinks = () => {
    const { user, logOut } = useAuth();
-   const [size, setSize] = React.useState(null);
+   const [size, setSize] = useState(null);
 
    const handleOpen = (value) => {
     setSize((prevSize) => (prevSize === value ? null : value));
