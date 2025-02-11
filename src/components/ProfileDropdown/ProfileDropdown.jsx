@@ -12,7 +12,7 @@ import { FaUserCircle } from "react-icons/fa";
 import { HiLogout } from "react-icons/hi";
 
 const ProfileDropdown = () => {
-  const { user } = useAuth();
+  const { user,logOut } = useAuth();
   return (
     <div>
       <Menu>
@@ -50,7 +50,7 @@ const ProfileDropdown = () => {
             </Typography>
           </MenuItem>
           <hr className="my-2 border-gray-400" />
-          <MenuItem className="flex items-center gap-2 ">
+          <MenuItem onClick={logOut} className="flex items-center gap-2 ">
           <HiLogout className=" text-lg  text-red-500" />
             <Typography variant="small" className="font-medium">
               Sign Out

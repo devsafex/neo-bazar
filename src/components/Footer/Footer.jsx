@@ -39,7 +39,7 @@ const currentYear = new Date().getFullYear();
 const Footer = ({ whiteLogo }) => {
       return (
             <footer className="relative w-full bg-[#00C982]/5 pt-10 mt-14">
-                  <div className="mx-auto w-full max-w-7xl px-4 md:px-0">
+                  <div className="mx-auto w-full container px-4 md:px-0">
                         <div className="grid grid-cols-1 ">
                                {/* Mobile view: Logo, email, and social links */}
                               <div className="md:hidden mx-auto mb-8 space-y-4">
