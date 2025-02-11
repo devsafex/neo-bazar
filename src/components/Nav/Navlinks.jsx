@@ -8,9 +8,10 @@ import {
 
 import { Link } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
+import { useEffect, useState } from "react";
 
 const Navlinks = () => {
-
+ const {user} = useAuth()
 
   const [openNav, setOpenNav] = useState(false);
   useEffect(() => {
@@ -98,16 +99,18 @@ const Navlinks = () => {
           </Typography>
           <div className="flex items-center gap-4">
             <div className=" hidden lg:block">{navList}</div>
-            <div className="flex items-center gap-x-1">
-
-                <Button
-                  size="sm"
-                  className="hidden lg:inline-block bg-[#00C982] rounded"
-                >
-                  <button onClick={logOut}>Logout</button>
-                </Button>
-
-            </div>
+            {!user&&<div className="flex items-center gap-x-1">
+            <Link to={"/login"}>
+              <Button fullWidth variant="text" size="sm" className="">
+                <span>Log In</span>
+              </Button>
+            </Link>
+            <Link to={"/signup"}>
+              <Button fullWidth size="sm" className=" bg-[#00C982] rounded">
+                <span>Sign Up</span>
+              </Button>
+            </Link>
+          </div>}
             <IconButton
               variant="text"
               className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
@@ -155,7 +158,7 @@ const Navlinks = () => {
                 <span>Log In</span>
               </Button>
             </Link>
-            <Link to={"/register"}>
+            <Link to={"/signup"}>
               <Button fullWidth size="sm" className=" bg-[#00C982] rounded">
                 <span>Sign Up</span>
               </Button>
