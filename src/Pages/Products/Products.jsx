@@ -2,6 +2,7 @@ import { Checkbox, Option, Select } from "@material-tailwind/react";
 import ProductCard from "../../components/ProductCard/ProductCard";
 
 const Products = () => {
+   
   const gamingLaptop = {
     id: 1,
     name: "ASUS ROG Strix G16",
@@ -34,7 +35,7 @@ const Products = () => {
           </div>
         </div>
         <div className=" md:grid grid-cols-12  gap-5 h-full ">
-          <div className=" col-span-3 xl:col-span-2 h-full ">
+          <div className=" col-span-3 xl:col-span-2 h-full "> 
             {/* filterr  */}
             <div >
               <div className="  flex items-center "><Checkbox /> Free delivery</div>
