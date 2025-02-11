@@ -2,6 +2,7 @@ import { Checkbox, Option, Select } from "@material-tailwind/react";
 import ProductCard from "../../components/ProductCard/ProductCard";
 
 const Products = () => {
+   
   const gamingLaptop = {
     id: 1,
     name: "ASUS ROG Strix G16",

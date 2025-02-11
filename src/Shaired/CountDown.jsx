@@ -23,7 +23,7 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
         
         <span className="font-bold bg-primary-color bg-opacity-10 p-2 border rounded-xs">
           {seconds}<span className="text-sm block text-black/60">Secs</span>
-        </span>.
+        </span>
       </div>
     );
   }
