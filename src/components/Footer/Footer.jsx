@@ -38,7 +38,7 @@ const currentYear = new Date().getFullYear();
 // eslint-disable-next-line react/prop-types
 const Footer = ({ whiteLogo }) => {
       return (
-            <footer className="relative w-full">
+            <footer className="relative w-full bg-[#00C982]/5 pt-10 mt-14">
                   <div className="mx-auto w-full max-w-7xl px-4 md:px-0">
                         <div className="grid grid-cols-1 ">
                                {/* Mobile view: Logo, email, and social links */}
@@ -99,7 +99,7 @@ const Footer = ({ whiteLogo }) => {
                               </div>
                         </div>
                         {/* Footer bottom section with copyright and payment icons */}
-                        <div className="mt-12 flex w-full flex-col items-center justify-center border-t border-blue-gray-50 py-4 md:flex-row md:justify-between">
+                        <div className="mt-12 flex w-full flex-col items-center justify-center  border-t border-t-gray-200 py-4 md:flex-row md:justify-between">
                               <Typography
                                     variant="small"
                                     className="mb-4 text-center font-normal text-blue-gray-900 md:mb-0"
