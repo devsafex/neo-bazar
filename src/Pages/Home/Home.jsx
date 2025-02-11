@@ -1,3 +1,4 @@
+import Faq from "../../components/FAQ/Faq";
 import Hero from "../../components/Hero/Hero";
 import HotDeals from "../../components/HotDeals/HotDeals";
 import SponsorsBanner from "../../components/SponsorsBanner/SponsorsBanner";
@@ -18,7 +19,10 @@ const Home = () => {
       {/* Sponsors section*/}
       <SponsorsBanner></SponsorsBanner>
 
-      {/* Hello i am home */}
+      {/* FAQ */}
+      <Faq/>
+
+      
     </div>
   );
 };
