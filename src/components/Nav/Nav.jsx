@@ -8,7 +8,7 @@ import ProfileDropdown from "../ProfileDropdown/ProfileDropdown";
 const Nav = () => {
   const {user} = useAuth()
   return (
-    <div className=" ">
+    <div className=" " id="nav-top">
       <div className=" bg-[#00C982] fixed w-full z-50">
         <div className=" container w-11/12 gap-2  lg:w-full mx-auto flex items-center justify-between py-2">
           <div>
