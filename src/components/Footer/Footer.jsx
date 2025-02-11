@@ -39,7 +39,7 @@ const currentYear = new Date().getFullYear();
 const Footer = ({ whiteLogo }) => {
       return (
             <footer className="relative w-full bg-[#00C982]/5 pt-10 mt-14">
-                  <div className="mx-auto w-full max-w-7xl px-4 md:px-0">
+                  <div className="mx-auto  container w-11/12 lg:w-full px-4 md:px-0">
                         <div className="grid grid-cols-1 ">
                                {/* Mobile view: Logo, email, and social links */}
                               <div className="md:hidden mx-auto mb-8 space-y-4">
@@ -52,7 +52,7 @@ const Footer = ({ whiteLogo }) => {
                                                 </div>
                                           </Link>
                                     </div>
-                                    <p className="flex items-center gap-2 text-lg text-[#111111]"><MdOutlineMail /> devsafex.team@gmail.com</p>
+                                    <p className="flex items-center gap-2 text-lg text-[#111111]"><MdOutlineMail className=" text-xl " /> devsafex.team@gmail.com</p>
                                     <div className="flex space-x-3 justify-center">
                                             <Link> <FaFacebook className="text-blue-600 hover:text-blue-800" size={20} /> </Link>
                                             <Link>  <FaWhatsapp className="text-green-500 hover:text-green-700" size={20} /></Link>
@@ -64,7 +64,7 @@ const Footer = ({ whiteLogo }) => {
                               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 justify-between gap-4 md:gap-7">
                                     <div className="hidden md:block space-y-4">
                                           <Logo></Logo>
-                                          <p className="flex items-center gap-2 text-sm text-[#111111]"><MdOutlineMail /> devsafex.team@gmail.com</p>
+                                          <p className="flex items-center gap-2 text-sm text-[#111111]"><MdOutlineMail className=" text-xl " /> devsafex.team@gmail.com</p>
                                           <div className="flex space-x-3">
                                             <Link> <FaFacebook className="text-blue-600 hover:text-blue-800" size={20} /> </Link>
                                             <Link>  <FaWhatsapp className="text-green-500 hover:text-green-700" size={20} /></Link>

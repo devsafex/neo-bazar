@@ -5,12 +5,12 @@ import {
   Button,
   IconButton,
 } from "@material-tailwind/react";
-import { useEffect, useState } from "react";
+
 import { Link } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 
 const Navlinks = () => {
-  const { user, logOut } = useAuth();
+
 
   const [openNav, setOpenNav] = useState(false);
   useEffect(() => {
@@ -97,37 +97,16 @@ const Navlinks = () => {
             Neo bazar
           </Typography>
           <div className="flex items-center gap-4">
-            <div className="mr-4 hidden lg:block">{navList}</div>
+            <div className=" hidden lg:block">{navList}</div>
             <div className="flex items-center gap-x-1">
-              {!user && (
-                <>
-                  <Link to={"/login"}>
-                    <Button
-                      variant="text"
-                      size="sm"
-                      className="hidden lg:inline-block"
-                    >
-                      <span>Log In</span>
-                    </Button>
-                  </Link>
-                  <Link to={"/signup"}>
-                    <Button
-                      size="sm"
-                      className="hidden lg:inline-block bg-[#00C982] rounded"
-                    >
-                      <span>Sign Up</span>
-                    </Button>
-                  </Link>
-                </>
-              )}
-              {user && (
+
                 <Button
                   size="sm"
                   className="hidden lg:inline-block bg-[#00C982] rounded"
                 >
                   <button onClick={logOut}>Logout</button>
                 </Button>
-              )}
+
             </div>
             <IconButton
               variant="text"
@@ -170,7 +149,7 @@ const Navlinks = () => {
         </div>
         <MobileNav open={openNav}>
           {navList}
-          <div className="flex items-center gap-x-1">
+          {!user&&<div className="flex items-center gap-x-1">
             <Link to={"/login"}>
               <Button fullWidth variant="text" size="sm" className="">
                 <span>Log In</span>
@@ -181,7 +160,7 @@ const Navlinks = () => {
                 <span>Sign Up</span>
               </Button>
             </Link>
-          </div>
+          </div>}
         </MobileNav>
       </Navbar>
     </div>

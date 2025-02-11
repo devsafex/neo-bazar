@@ -17,7 +17,7 @@ const Products = () => {
   };
 
   return (
-    <div className=" bg-[#00C982]/5 min-h-screen">
+    <div className="  min-h-screen">
       <div className="  container mx-auto h-full w-11/12 md:w-full">
         <div className=" py-4 w-full flex items-center justify-between border-b-2
          border-b-[#00C982]/10 mb-3">
