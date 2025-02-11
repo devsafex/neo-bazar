@@ -5,13 +5,18 @@ import {
   Button,
   IconButton,
 } from "@material-tailwind/react";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 
 const Navlinks = () => {
    const { user, logOut } = useAuth();
+   const [size, setSize] = React.useState(null);
 
+   const handleOpen = (value) => {
+    setSize((prevSize) => (prevSize === value ? null : value));
+  };
+  
   const [openNav, setOpenNav] = useState(false);
   useEffect(() => {
     window.addEventListener(
@@ -171,9 +176,10 @@ const Navlinks = () => {
           {navList}
           <div className="flex items-center gap-x-1">
             <Link to={"/login"}>
-              <Button fullWidth variant="text" size="sm" className="">
+              <Button onClick={() => handleOpen("md")} fullWidth variant="text" size="sm" className="">
                 <span>Log In</span>
               </Button>
+            
             </Link>
             <Link to={"/register"}>
               <Button fullWidth size="sm" className=" bg-[#00C982] rounded">
