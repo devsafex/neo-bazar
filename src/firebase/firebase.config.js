@@ -1,12 +1,12 @@
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC5sCzr-OWp5Hz26UGmEiR2iufMqnH5wHo",
-  authDomain: "neo-bazar.firebaseapp.com",
-  projectId: "neo-bazar",
-  storageBucket: "neo-bazar.firebasestorage.app",
-  messagingSenderId: "248515101244",
-  appId: "1:248515101244:web:0d84c41f9c4d402b533939"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId
 };
 
 export const app = initializeApp(firebaseConfig);
