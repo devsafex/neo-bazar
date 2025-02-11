@@ -34,7 +34,7 @@ const Faq = () => {
 
   return (
     <div>
-      <div className=" container mx-auto">
+      <div className=" container mx-auto w-11/12 xl:w-full">
         <h1 className=" text-xl md:text-2xl">
           Frequently Asked Questions (FAQ) - NeoBazaar
         </h1>
