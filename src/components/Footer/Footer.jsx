@@ -39,9 +39,9 @@ const currentYear = new Date().getFullYear();
 const Footer = ({ whiteLogo }) => {
       return (
             <footer className="relative w-full">
-                  <div className="mx-auto w-full max-w-7xl px-4 md:px-0">
+                  <div className="mx-auto w-full max-w-7xl px-4 lg:px-0">
                         <div className="grid grid-cols-1 ">
-                               {/* Mobile view: Logo, email, and social links */}
+                              {/* Mobile view: Logo, email, and social links */}
                               <div className="md:hidden mx-auto mb-8 space-y-4">
                                     <div>
                                           <Link to="/" className=" flex items-center justify-center  mx-auto">
@@ -54,23 +54,23 @@ const Footer = ({ whiteLogo }) => {
                                     </div>
                                     <p className="flex items-center gap-2 text-lg text-[#111111]"><MdOutlineMail /> devsafex.team@gmail.com</p>
                                     <div className="flex space-x-3 justify-center">
-                                            <Link> <FaFacebook className="text-blue-600 hover:text-blue-800" size={20} /> </Link>
-                                            <Link>  <FaWhatsapp className="text-green-500 hover:text-green-700" size={20} /></Link>
-                                            <Link> <FaTwitter className="text-blue-400 hover:text-blue-600" size={20} /> </Link>
-                                            <Link>  <FaInstagram className="text-pink-600 hover:text-pink-800" size={20} /></Link>
-                                        </div>
+                                          <Link> <FaFacebook className="text-blue-600 hover:text-blue-800" size={20} /> </Link>
+                                          <Link>  <FaWhatsapp className="text-green-500 hover:text-green-700" size={20} /></Link>
+                                          <Link> <FaTwitter className="text-blue-400 hover:text-blue-600" size={20} /> </Link>
+                                          <Link>  <FaInstagram className="text-pink-600 hover:text-pink-800" size={20} /></Link>
+                                    </div>
                               </div>
-                               {/* Desktop view: Logo, email, social links, and footer links */}
+                              {/* Desktop view: Logo, email, social links, and footer links */}
                               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 justify-between gap-4 md:gap-7">
                                     <div className="hidden md:block space-y-4">
                                           <Logo></Logo>
                                           <p className="flex items-center gap-2 text-sm text-[#111111]"><MdOutlineMail /> devsafex.team@gmail.com</p>
                                           <div className="flex space-x-3">
-                                            <Link> <FaFacebook className="text-blue-600 hover:text-blue-800" size={20} /> </Link>
-                                            <Link>  <FaWhatsapp className="text-green-500 hover:text-green-700" size={20} /></Link>
-                                            <Link> <FaTwitter className="text-blue-400 hover:text-blue-600" size={20} /> </Link>
-                                            <Link>  <FaInstagram className="text-pink-600 hover:text-pink-800" size={20} /></Link>
-                                        </div>
+                                                <Link> <FaFacebook className="text-blue-600 hover:text-blue-800" size={20} /> </Link>
+                                                <Link>  <FaWhatsapp className="text-green-500 hover:text-green-700" size={20} /></Link>
+                                                <Link> <FaTwitter className="text-blue-400 hover:text-blue-600" size={20} /> </Link>
+                                                <Link>  <FaInstagram className="text-pink-600 hover:text-pink-800" size={20} /></Link>
+                                          </div>
                                     </div>
                                     {/* Map through LINKS to render footer sections */}
                                     {LINKS.map(({ title, items }) => (
