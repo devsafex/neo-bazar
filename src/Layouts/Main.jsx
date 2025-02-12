@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Nav from "../components/Nav/Nav";
+import Footer from "../components/Footer/Footer";
 
 const Main = () => {
   return (
@@ -9,12 +10,12 @@ const Main = () => {
         <Nav></Nav>
       </div>
       {/* Outlet  */}
-      <div className=" min-h-[100vh]">
+      <div className="">
         <Outlet />
       </div>
       {/* Footer  */}
       <div>
-            
+        <Footer></Footer>    
       </div>
     </div>
   );

@@ -5,9 +5,14 @@ import {
   Button,
   IconButton,
 } from "@material-tailwind/react";
+
+import { Link } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
 import { useEffect, useState } from "react";
 
 const Navlinks = () => {
+ const {user} = useAuth()
+
   const [openNav, setOpenNav] = useState(false);
   useEffect(() => {
     window.addEventListener(
@@ -93,22 +98,19 @@ const Navlinks = () => {
             Neo bazar
           </Typography>
           <div className="flex items-center gap-4">
-            <div className="mr-4 hidden lg:block">{navList}</div>
-            <div className="flex items-center gap-x-1">
-              <Button
-                variant="text"
-                size="sm"
-                className="hidden lg:inline-block"
-              >
+            <div className=" hidden lg:block">{navList}</div>
+            {!user&&<div className="flex items-center gap-x-1">
+            <Link to={"/login"}>
+              <Button fullWidth variant="text" size="sm" className="">
                 <span>Log In</span>
               </Button>
-              <Button
-                size="sm"
-                className="hidden lg:inline-block bg-[#00C982] rounded"
-              >
-                <span>Sign in</span>
+            </Link>
+            <Link to={"/signup"}>
+              <Button fullWidth size="sm" className=" bg-[#00C982] rounded">
+                <span>Sign Up</span>
               </Button>
-            </div>
+            </Link>
+          </div>}
             <IconButton
               variant="text"
               className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
@@ -150,14 +152,18 @@ const Navlinks = () => {
         </div>
         <MobileNav open={openNav}>
           {navList}
-          <div className="flex items-center gap-x-1">
-            <Button fullWidth variant="text" size="sm" className="">
-              <span>Log In</span>
-            </Button>
-            <Button fullWidth size="sm" className=" bg-[#00C982] rounded">
-              <span>Sign Up</span>
-            </Button>
-          </div>
+          {!user&&<div className="flex items-center gap-x-1">
+            <Link to={"/login"}>
+              <Button fullWidth variant="text" size="sm" className="">
+                <span>Log In</span>
+              </Button>
+            </Link>
+            <Link to={"/signup"}>
+              <Button fullWidth size="sm" className=" bg-[#00C982] rounded">
+                <span>Sign Up</span>
+              </Button>
+            </Link>
+          </div>}
         </MobileNav>
       </Navbar>
     </div>
