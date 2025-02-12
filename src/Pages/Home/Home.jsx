@@ -1,11 +1,29 @@
-
+import AllCategory from "../../components/AllCategory/AllCategory";
+import Hero from "../../components/Hero/Hero";
+import HotDeals from "../../components/HotDeals/HotDeals";
+import SponsorsBanner from "../../components/SponsorsBanner/SponsorsBanner";
 
 const Home = () => {
-      return (
-            <div>
-                   Hello i am home
-            </div>
-      );
+  // const [isLoading, setisLoading] = useState(false)
+
+  return (
+    <div className=" ">
+      {/* all category section  */}
+      <AllCategory />
+      {/* Hero secion  */}
+      <div className=" my-10">
+        <Hero />
+      </div>
+
+      {/* {Hot deals } */}
+      <HotDeals></HotDeals>
+
+      {/* Sponsors section*/}
+      <SponsorsBanner></SponsorsBanner>
+
+      {/* Hello i am home */}
+    </div>
+  );
 };
 
 export default Home;
