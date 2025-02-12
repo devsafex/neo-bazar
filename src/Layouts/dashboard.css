@@ -1,0 +1,8 @@
+#navlinks .active {
+      background-color: #00C982;
+      color: white;
+}
+#navlinks .active .nav-icons {
+     
+      color: white;
+}
