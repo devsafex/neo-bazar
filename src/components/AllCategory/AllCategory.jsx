@@ -14,7 +14,7 @@ const AllCategory = () => {
   }, []);
 
   return (
-    <div className="w-full">
+    <div className="w-full my-3">
       <Swiper
         slidesPerView={10}
         spaceBetween={10}
@@ -25,20 +25,22 @@ const AllCategory = () => {
         {items.map((item, idx) => (
           <SwiperSlide
             key={idx}
-            className="flex flex-col items-center justify-center gap-2 p-2 border-2 border-red-400"
+            className="flex flex-col items-center justify-center gap-2 p-2"
           >
-            {/* Image Container */}
-            <div className="p-2 bg-gray-100 rounded-full w-16 h-16">
-              <img
-                src={item.img}
-                className="w-12 border-2 border-red-400 h-12 object-cover mx-auto rounded-full"
-                alt={item.slug}
-              />
+            {/* Image Container (Centering Fixed) */}
+            <div className="w-full flex flex-col items-center justify-center">
+              <div className="w-16 h-16 bg-gray-100 rounded-full ">
+                <img
+                  src={item.img}
+                  className="w-12 h-12 object-cover rounded-full"
+                  alt={item.slug}
+                />
+              </div>
+              {/* Category Name (Centering Fixed) */}
+              <p className="text-sm font-medium text-gray-700 text-center w-full">
+                {item.slug}
+              </p>
             </div>
-            {/* Category Name */}
-            <p className="text-sm font-medium border-2 border-red-400 text-center text-gray-700">
-              {item.slug.replace("-", " ")}
-            </p>
           </SwiperSlide>
         ))}
       </Swiper>
