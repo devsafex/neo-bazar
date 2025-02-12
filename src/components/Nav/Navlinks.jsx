@@ -1,4 +1,3 @@
-import { useAuth0 } from "@auth0/auth0-react";
 import {
   Navbar,
   MobileNav,
@@ -6,11 +5,13 @@ import {
   Button,
   IconButton,
 } from "@material-tailwind/react";
-import { useEffect, useState } from "react";
+
 import { Link } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
+import { useEffect, useState } from "react";
 
 const Navlinks = () => {
-  const { isAuthenticated, logout } = useAuth0();
+ const {user} = useAuth()
 
   const [openNav, setOpenNav] = useState(false);
   useEffect(() => {
@@ -97,37 +98,19 @@ const Navlinks = () => {
             Neo bazar
           </Typography>
           <div className="flex items-center gap-4">
-            <div className="mr-4 hidden lg:block">{navList}</div>
-            <div className="flex items-center gap-x-1">
-              {
-                !isAuthenticated && <><Link to={'/login'}>
-                <Button
-                  variant="text"
-                  size="sm"
-                  className="hidden lg:inline-block"
-                >
-                  <span>Log In</span>
-                </Button>
-              </Link>
-              <Link to={'/signup'}>
-              <Button
-                size="sm"
-                className="hidden lg:inline-block bg-[#00C982] rounded"
-              >
+            <div className=" hidden lg:block">{navList}</div>
+            {!user&&<div className="flex items-center gap-x-1">
+            <Link to={"/login"}>
+              <Button fullWidth variant="text" size="sm" className="">
+                <span>Log In</span>
+              </Button>
+            </Link>
+            <Link to={"/signup"}>
+              <Button fullWidth size="sm" className=" bg-[#00C982] rounded">
                 <span>Sign Up</span>
               </Button>
-            </Link></>
-              }
-              {
-                isAuthenticated &&  <Button
-                size="sm"
-                className="hidden lg:inline-block bg-[#00C982] rounded"
-              >
-                <button onClick={()=>logout()}>Logout</button>
-              </Button>
-              }
-              
-            </div>
+            </Link>
+          </div>}
             <IconButton
               variant="text"
               className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
@@ -169,18 +152,18 @@ const Navlinks = () => {
         </div>
         <MobileNav open={openNav}>
           {navList}
-          <div className="flex items-center gap-x-1">
+          {!user&&<div className="flex items-center gap-x-1">
             <Link to={"/login"}>
               <Button fullWidth variant="text" size="sm" className="">
                 <span>Log In</span>
               </Button>
             </Link>
-            <Link to={"/register"}>
+            <Link to={"/signup"}>
               <Button fullWidth size="sm" className=" bg-[#00C982] rounded">
                 <span>Sign Up</span>
               </Button>
             </Link>
-          </div>
+          </div>}
         </MobileNav>
       </Navbar>
     </div>

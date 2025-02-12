@@ -9,7 +9,7 @@ const Hero = () => {
           <HeroSwiper />
         </div>
         <div className=" w-full lg:w-3/11 lg:ml-3 h-full">
-            <RightHero/>      
+          <RightHero />
         </div>
       </div>
     </div>
