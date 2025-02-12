@@ -5,23 +5,23 @@
       },
       {
         "slug": "fashion",
-        "img": "https://imgur.com/HLS9wVw.png"
+        "img": "https://imgur.com/nr9VzIl.png"
       },
       {
         "slug": "home-kitchen",
-        "img": "https://imgur.com/VzXjHbw.png"
+        "img": "https://imgur.com/14JdjC4.png"
       },
       {
         "slug": "beauty-personal-care",
-        "img": "https://imgur.com/ZSvrclS.png"
+        "img": "https://imgur.com/f3xUf7E.png"
       },
       {
         "slug": "sports-outdoors",
-        "img": "https://imgur.com/h3ex3Q9.png"
+        "img": "https://imgur.com/BgLHXi4.png"
       },
       {
         "slug": "toys-games",
-        "img": "https://imgur.com/rCuVcQa.png"
+        "img": "https://imgur.com/0aYFGuW.png"
       },
       {
         "slug": "books",
@@ -29,7 +29,7 @@
       },
       {
         "slug": "health-wellness",
-        "img": "https://imgur.com/SXPLy5a.png"
+        "img": "https://imgur.com/sE5X74C.png"
       },
       {
         "slug": "office-supplies",
@@ -37,23 +37,54 @@
       },
       {
         "slug": "groceries",
-        "img": "https://imgur.com/cgkWZQA.png"
+        "img": "https://imgur.com/I4Hxtxp.png"
       },
       {
         "slug": "pet-supplies",
-        "img": "https://imgur.com/RdM0OUU.png"
+        "img": "https://imgur.com/Zb9JKXp.png"
       },
       {
         "slug": "jewelry-accessories",
-        "img": "https://imgur.com/SNID0Np.png"
+        "img": "https://imgur.com/XZuDh32.png"
       },
       {
         "slug": "furniture",
-        "img": "https://imgur.com/nnW7jux.png"
+        "img": "https://imgur.com/34ydRhf.png"
       },
       {
         "slug": "gaming",
-        "img": "https://imgur.com/h0cICBc.png"
-      }
+        "img": "https://imgur.com/A7EdTXo.png"
+      },
+      
+        {
+          "slug": "smartphones",
+          "img": "https://imgur.com/0Fir3hY.png"
+        },
+        {
+          "slug": "watches",
+          "img": "https://imgur.com/9DxDY5x.png"
+        },
+        {
+          "slug": "musical-instruments",
+          "img": "https://imgur.com/d0JtltK.png"
+        },
+        {
+          "slug": "fitness-equipment",
+          "img": "https://imgur.com/gSR2aOF.png"
+        },
+        {
+          "slug": "baby-products",
+          "img": "https://imgur.com/5b6ZUBF.png"
+        },
+        {
+          "slug": "travel-accessories",
+          "img": "https://imgur.com/c9N3X47.png"
+        },
+        {
+          "slug": "home-decor",
+          "img": "https://imgur.com/EKmh9kY.png"
+        }
+      
+      
     ]
     
