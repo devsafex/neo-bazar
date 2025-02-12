@@ -14,9 +14,9 @@ const AllCategory = () => {
   }, []);
 
   return (
-    <div className="w-full my-3">
+    <div className="w-full -mb-10">
       <Swiper
-        slidesPerView={10}
+        slidesPerView={11}
         spaceBetween={10}
         freeMode={true}
         modules={[FreeMode]}
