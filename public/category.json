@@ -1,90 +1,69 @@
 [
-      {
-        "slug": "electronics",
-        "img": "https://imgur.com/RKcQgdY.png"
-      },
-      {
-        "slug": "fashion",
-        "img": "https://imgur.com/nr9VzIl.png"
-      },
-      {
-        "slug": "home-kitchen",
-        "img": "https://imgur.com/14JdjC4.png"
-      },
-      {
-        "slug": "BeautyCare",
-        "img": "https://imgur.com/f3xUf7E.png"
-      },
-      {
-        "slug": "sports-outdoors",
-        "img": "https://imgur.com/BgLHXi4.png"
-      },
-      {
-        "slug": "toys-games",
-        "img": "https://imgur.com/0aYFGuW.png"
-      },
-      {
-        "slug": "books",
-        "img": "https://imgur.com/6IZPZFd.png"
-      },
-      {
-        "slug": "health-wellness",
-        "img": "https://imgur.com/sE5X74C.png"
-      },
-      {
-        "slug": "office-supplies",
-        "img": "https://imgur.com/Fu1qMfI.png"
-      },
-      {
-        "slug": "groceries",
-        "img": "https://imgur.com/I4Hxtxp.png"
-      },
-      {
-        "slug": "pet-supplies",
-        "img": "https://imgur.com/Zb9JKXp.png"
-      },
-      {
-        "slug": "jewelry",
-        "img": "https://imgur.com/XZuDh32.png"
-      },
-      {
-        "slug": "furniture",
-        "img": "https://imgur.com/34ydRhf.png"
-      },
-      {
-        "slug": "gaming",
-        "img": "https://imgur.com/A7EdTXo.png"
-      },
-      
-        {
-          "slug": "smartphones",
-          "img": "https://imgur.com/0Fir3hY.png"
-        },
-        {
-          "slug": "watches",
-          "img": "https://imgur.com/9DxDY5x.png"
-        },
-        {
-          "slug": "musical",
-          "img": "https://imgur.com/d0JtltK.png"
-        },
-        {
-          "slug": "fitness-equipment",
-          "img": "https://imgur.com/gSR2aOF.png"
-        },
-        {
-          "slug": "baby-products",
-          "img": "https://imgur.com/5b6ZUBF.png"
-        },
-        {
-          "slug": "travel-accessories",
-          "img": "https://imgur.com/c9N3X47.png"
-        },
-        {
-          "slug": "home-decor",
-          "img": "https://imgur.com/EKmh9kY.png"
-        }
-      
-      
-    ]
-    
+  {
+    "slug": "electronics",
+    "name": "Electronics",
+    "img": "https://imgur.com/RKcQgdY.png"
+  },
+  {
+    "slug": "fashion",
+    "name": "Fashion",
+    "img": "https://imgur.com/nr9VzIl.png"
+  },
+  {
+    "slug": "home-kitchen",
+    "name": "Home & Kitchen",
+    "img": "https://imgur.com/14JdjC4.png"
+  },
+  {
+    "slug": "BeautyCare",
+    "name": "Beauty & Care",
+    "img": "https://imgur.com/f3xUf7E.png"
+  },
+
+  {
+    "slug": "toys-games",
+    "name": "Toys & Games",
+    "img": "https://imgur.com/0aYFGuW.png"
+  },
+  {
+    "slug": "books",
+    "name": "Books",
+    "img": "https://imgur.com/6IZPZFd.png"
+  },
+
+  
+  {
+    "slug": "groceries",
+    "name": "Groceries",
+    "img": "https://imgur.com/I4Hxtxp.png"
+  },
+ 
+  {
+    "slug": "jewelry",
+    "name": "Jewelry",
+    "img": "https://imgur.com/XZuDh32.png"
+  },
+  {
+    "slug": "furniture",
+    "name": "Furniture",
+    "img": "https://imgur.com/34ydRhf.png"
+  },
+  
+  {
+    "slug": "smartphones",
+    "name": "Smartphones",
+    "img": "https://imgur.com/0Fir3hY.png"
+  },
+  {
+    "slug": "watches",
+    "name": "Watches",
+    "img": "https://imgur.com/9DxDY5x.png"
+  },
+  
+
+  {
+    "slug": "baby-products",
+    "name": "Baby Products",
+    "img": "https://imgur.com/5b6ZUBF.png"
+  }
+]

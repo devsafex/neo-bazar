@@ -16,7 +16,7 @@ const AllCategory = () => {
   return (
     <div className="w-full -mb-10">
       <Swiper
-        slidesPerView={11}
+        slidesPerView={12}
         spaceBetween={10}
         freeMode={true}
         modules={[FreeMode]}
@@ -33,12 +33,12 @@ const AllCategory = () => {
                 <img
                   src={item.img}
                   className="w-12 h-12 object-cover rounded-full"
-                  alt={item.slug}
+                  alt={item.name}
                 />
               </div>
               {/* Category Name (Centering Fixed) */}
               <p className="text-sm font-medium text-gray-700 text-center w-full">
-                {item.slug}
+                {item.name}
               </p>
             </div>
           </SwiperSlide>
