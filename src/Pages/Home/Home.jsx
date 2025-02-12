@@ -1,15 +1,18 @@
-import { IoIosArrowUp } from "react-icons/io";
-import Faq from "../../components/FAQ/Faq";
+import AllCategory from "../../components/AllCategory/AllCategory";
 import Hero from "../../components/Hero/Hero";
 import HotDeals from "../../components/HotDeals/HotDeals";
 import SponsorsBanner from "../../components/SponsorsBanner/SponsorsBanner";
 import { IconButton } from "@material-tailwind/react";
+import Faq from "./../../components/FAQ/Faq";
+import { IoIosArrowUp } from "react-icons/io";
 
 const Home = () => {
   // const [isLoading, setisLoading] = useState(false)
 
   return (
     <div className=" ">
+      {/* all category section  */}
+      <AllCategory />
       {/* Hero secion  */}
       <div className=" my-10">
         <Hero />
