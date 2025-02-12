@@ -1,3 +1,5 @@
+import { TimelineWithIcon } from "../../components/Timeline/Timeline";
+
 const BecomeSeller = () => {
   return (
     <div className="container mx-auto py-12 px-4">
@@ -120,6 +122,7 @@ const BecomeSeller = () => {
         5 Simple Steps to Start Selling
         </h1>
       </div>
+      <TimelineWithIcon></TimelineWithIcon>
     </div>
   );
 };
