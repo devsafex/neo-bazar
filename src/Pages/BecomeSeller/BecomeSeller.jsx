@@ -59,7 +59,7 @@ const BecomeSeller = () => {
               Reliable Shipping
             </h3>
             <p className="text-gray-600">
-              Fast, reliable, and hassle-free delivery through Neo Bazar's
+              Fast, reliable, and hassle-free delivery through Neo Bazar&apos;s
               logistics network.
             </p>
           </div>
