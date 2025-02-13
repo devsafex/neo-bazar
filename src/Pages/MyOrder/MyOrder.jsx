@@ -19,7 +19,7 @@ const MyOrder = () => {
       {/* <h2 className="text-2xl font-light">Orders History and Status</h2> */}
       <div className="grid grid-cols-12 gap-3">
         {/* side container */}
-        <div className=" col-span-5 md:col-span-3 lg:col-span-2 mt-4 border-2 p-3 min-h-52">
+        <div className="bg-[#00C982]/5 col-span-5 md:col-span-3 lg:col-span-2 mt-4  p-3 min-h-52">
           <h3 className=" text-2xl font-semibold mb-2">Filters</h3>
           <h4 className="text-gray-500 text-lg mb-2">Order Status</h4>
           <div className="flex flex-col ">
@@ -40,9 +40,10 @@ const MyOrder = () => {
         {/* min box  */}
         <div className="col-span-7 overflow-x-scroll  md:col-span-9 lg:col-span-10 mt-4 p-3 border-2 min-h-screen">
           {/* search container  */}
-          <div className="flex  w-11/12 mx-auto items-center">
+          <div className="flex   items-center">
             <input
               type="text"
+              placeholder="e.g. product name"
               className="border-2 min-w-4xl border-[#00C982] w-full rounded-l-lg p-2 "
             />
             <Button
@@ -68,7 +69,7 @@ const MyOrder = () => {
                 {orders.map((order, index) => (
                   <div
                     key={index}
-                    className="flex flex-col sm:flex-row items-center justify-between  rounded-lg shadow-lg shadow-[#00C982]/10 p-4 mb-3 bg-white  gap-4"
+                    className="flex flex-col sm:flex-row items-center justify-between  rounded-lg border-[#00C982]/10 border-2 p-4 mb-3 bg-white  gap-4"
                   >
                     {/* Left Section (Image & Details) */}
                     <div className="flex items-center gap-4 w-full sm:w-auto">
