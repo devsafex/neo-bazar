@@ -42,8 +42,8 @@ const MyOrder = () => {
               className="flex bg-[#00C982] rounded-r-lg rounded-l-none  items-center gap-1"
             >
               {loading ? (
-                <div className="w-16 h-4 flex items-center gap-1">
-                  <Spinner className="border-[#00C982]" /> Loading
+                <div className="w-16 h-4 flex items-center justify-center gap-1">
+                  <Spinner className="border-[#00C982] text-white " />
                 </div>
               ) : (
                 <>
