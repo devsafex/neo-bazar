@@ -62,7 +62,7 @@ const MyOrder = () => {
           </div>
           {/* order history  */}
           <div className="mt-2 px-4">
-            <div className="border-y rounded-lg shadow-md shadow-[#00C982]/10 p-2 bg-white">
+            <div className="">
               {/* Order List */}
               <div className="w-full">
                 {orders.map((order, index) => (
