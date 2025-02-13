@@ -1,3 +1,5 @@
+# Primary Color - #00C982
+
 # DevSafeX - E-Commerce Platform 🚀
 
 ## 📌 Project Overview

@@ -6,38 +6,36 @@ import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
 import ProductDetails from "../Pages/ProductDetails/ProductDetails";
 import Dashboard from "../Layouts/Dashboard";
-import DashboardHome from "../Pages/Dashboard/DashboardHome/DashboardHome";
+import BecomeSeller from "../Pages/BecomeSeller/BecomeSeller";
 import DashboardProducts from "../Pages/Dashboard/DashboardProducts/DashboardProducts";
-import MyOrder from "../Pages/MyOrder/MyOrder";
 
 const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Main></Main>,
-    children: [
       {
-        path: "/",
-        element: <Home />,
-      },
-      {
-        path: "/products",
-        element: <Products />,
-      },
-      {
-        path: "/product/:id",
-        element: <ProductDetails />,
-      },
-      {
-        path: "/login",
-        element: <Login></Login>,
-      },
-      {
-        path: "/signup",
-        element: <SignUp></SignUp>,
-      },
-      {
-        path: "/myOrder",
-        element: <MyOrder />,
+            path: '/' ,
+            element: <Main></Main> ,
+            children : [
+                  {
+                        path:'/' ,
+                        element: <Home/>
+                  },
+                  {
+                        path:'/products' ,
+                        element: <Products/>
+                  },
+                  {
+                     path:'/product/:id' ,
+                     element: <ProductDetails/>    
+                  },
+                  {
+                        path: '/login',
+                        element: <Login></Login>
+                  },
+                  {
+                        path: '/signup',
+                        element: <SignUp></SignUp>
+                  },
+                 
+            ]
       },
     ],
   },

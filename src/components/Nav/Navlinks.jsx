@@ -59,9 +59,9 @@ const Navlinks = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <Link to={"/myOrder"} className="flex items-center">
+        <a href="#" className="flex items-center">
           My orders
-        </Link>
+        </a>
       </Typography>
       <Typography
         as="li"
