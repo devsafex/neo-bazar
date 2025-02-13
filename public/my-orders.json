@@ -1,0 +1,35 @@
+[
+      {
+        "img": "https://imgur.com/RKcQgdY.png",
+        "item_name": "Wireless Headphones",
+        "price": "$59.99",
+        "status": "Delivered",
+        "date": "2025-02-10",
+        "color": "off-white"
+      },
+      {
+        "img": "https://imgur.com/nr9VzIl.png",
+        "item_name": "Smartwatch",
+        "price": "$129.99",
+        "status": "Cancelled",
+        "date": "2025-01-28",
+        "color": "grey"
+      },
+      {
+        "img": "https://imgur.com/14JdjC4.png",
+        "item_name": "Gaming Keyboard",
+        "price": "$89.50",
+        "status": "Returned",
+        "date": "2025-02-05",
+        "color": "white"
+      },
+      {
+        "img": "https://imgur.com/f3xUf7E.png",
+        "item_name": "Air Purifier",
+        "price": "$199.00",
+        "status": "Delivered",
+        "date": "2025-02-08",
+        "color": "white"
+      }
+    ]
+    

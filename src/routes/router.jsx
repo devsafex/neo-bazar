@@ -8,8 +8,6 @@ import ProductDetails from "../Pages/ProductDetails/ProductDetails";
 import Dashboard from "../Layouts/Dashboard";
 import BecomeSeller from "../Pages/BecomeSeller/BecomeSeller";
 import DashboardProducts from "../Pages/Dashboard/DashboardProducts/DashboardProducts";
-import DashboardHome from "../Pages/Dashboard/DashboardHome/DashboardHome";
-
 
 const router = createBrowserRouter([
       {
@@ -25,42 +23,40 @@ const router = createBrowserRouter([
                         element: <Products/>
                   },
                   {
-                        path:'/become-seller' ,
-                        element: <BecomeSeller />
-                  },
-                  {
                      path:'/product/:id' ,
                      element: <ProductDetails/>    
                   },
                   {
                         path: '/login',
-                        element: <Login />
+                        element: <Login></Login>
                   },
                   {
                         path: '/signup',
-                        element: <SignUp />
+                        element: <SignUp></SignUp>
                   },
                  
             ]
       },
+    ],
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard />,
+    children: [
       {
-            path:'/dashboard',
-            element: <Dashboard/>,
-            children:[
-                  {
-                        path:'/dashboard',
-                        element : <Navigate to="/dashboard/dashboard-home" replace/>
-                  },
-                  {
-                        path:'/dashboard/dashboard-home',
-                        element:<DashboardHome/>
-                  },
-                  {
-                        path:'/dashboard/products',
-                        element: <DashboardProducts/>
-                  }
-            ]
-      }
-])
+        path: "/dashboard",
+        element: <Navigate to="/dashboard/dashboard-home" replace />,
+      },
+      {
+        path: "/dashboard/dashboard-home",
+        element: <DashboardHome />,
+      },
+      {
+        path: "/dashboard/products",
+        element: <DashboardProducts />,
+      },
+    ],
+  },
+]);
 
 export default router;
