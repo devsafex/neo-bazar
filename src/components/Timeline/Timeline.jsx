@@ -1,33 +1,30 @@
 import {
     Timeline,
     TimelineItem,
-    TimelineConnector,
+   
     TimelineHeader,
     TimelineIcon,
     TimelineBody,
     Typography,
   } from "@material-tailwind/react";
-  import { BiBell, BiDollar, BiHome } from "react-icons/bi";
-import { FaAddressBook, FaAddressCard } from "react-icons/fa6";
-import { IoPersonAdd } from "react-icons/io5";
-import { RiFileList3Fill } from "react-icons/ri";
-import { SiGnuprivacyguard } from "react-icons/si";
+  import { SiGnuprivacyguard } from "react-icons/si";
+  import { IoPersonAdd } from "react-icons/io5";
+  import { FaAddressBook, FaAddressCard } from "react-icons/fa6";
+  import { RiFileList3Fill } from "react-icons/ri";
   
   export function TimelineWithIcon() {
     return (
-      <div className="w-full max-w-7xl mx-auto relative py-10">
+      <div className="w-full max-w-7xl mx-auto relative py-10 px-4">
         {/* Vertical Line */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 top-17 w-10/12 h-[2px] bg-gray-600"></div>
+        <div className="absolute left-1/2 transform -translate-x-1/2 top-16 w-[2px] h-full bg-gray-600 hidden lg:block"></div>
   
-        <Timeline className="grid grid-cols-5 gap-x-4">
+        <Timeline className="grid lg:grid-cols-5 grid-cols-1 gap-10">
           {/* Timeline Item 1 */}
-          <TimelineItem className="col-span-1 flex flex-col items-center text-start ">
-          <TimelineIcon className="p-3 bg-black text-white rounded-full shadow-md">
-                <SiGnuprivacyguard className="h-8 w-8" />
-              </TimelineIcon>
-            <TimelineConnector className="invisible" /> {/* Hidden since line is global */}
+          <TimelineItem className="flex flex-col items-center lg:items-start text-center lg:text-left">
+            <TimelineIcon className="p-3 bg-[#00C982] text-white rounded-full shadow-md">
+              <SiGnuprivacyguard className="h-8 w-8" />
+            </TimelineIcon>
             <TimelineHeader>
-             
               <Typography variant="h6" color="blue-gray" className="mt-4 font-bold">
                 Signup for Free
               </Typography>
@@ -40,11 +37,10 @@ import { SiGnuprivacyguard } from "react-icons/si";
           </TimelineItem>
   
           {/* Timeline Item 2 */}
-          <TimelineItem className="col-span-1 flex flex-col items-center ">
-            <TimelineConnector className="invisible" />
-              <TimelineIcon className="p-3 bg-black text-white rounded-full shadow-md">
-                <IoPersonAdd className="h-8 w-8" />
-              </TimelineIcon>
+          <TimelineItem className="flex flex-col items-center lg:items-start text-center lg:text-left">
+            <TimelineIcon className="p-3 bg-[#00C982] text-white rounded-full shadow-md">
+              <IoPersonAdd className="h-8 w-8" />
+            </TimelineIcon>
             <TimelineHeader>
               <Typography variant="h6" color="blue-gray" className="mt-4 font-bold">
                 Add Profile Information
@@ -58,11 +54,10 @@ import { SiGnuprivacyguard } from "react-icons/si";
           </TimelineItem>
   
           {/* Timeline Item 3 */}
-          <TimelineItem className="col-span-1 flex flex-col items-center ">
-            <TimelineConnector className="invisible" />
-              <TimelineIcon className="p-3 bg-black text-white rounded-full shadow-md">
-                <FaAddressBook className="h-8 w-8" />
-              </TimelineIcon>
+          <TimelineItem className="flex flex-col items-center lg:items-start text-center lg:text-left">
+            <TimelineIcon className="p-3 bg-[#00C982] text-white rounded-full shadow-md">
+              <FaAddressBook className="h-8 w-8" />
+            </TimelineIcon>
             <TimelineHeader>
               <Typography variant="h6" color="blue-gray" className="mt-4 font-bold">
                 Add Address Information
@@ -76,13 +71,12 @@ import { SiGnuprivacyguard } from "react-icons/si";
           </TimelineItem>
   
           {/* Timeline Item 4 */}
-          <TimelineItem className="col-span-1 flex flex-col items-center ">
-            <TimelineConnector className="invisible" />
-              <TimelineIcon className="p-3 bg-black text-white rounded-full shadow-md">
-                <FaAddressCard className="h-8 w-8" />
-              </TimelineIcon>
+          <TimelineItem className="flex flex-col items-center lg:items-start text-center lg:text-left">
+            <TimelineIcon className="p-3 bg-[#00C982] text-white rounded-full shadow-md">
+              <FaAddressCard className="h-8 w-8" />
+            </TimelineIcon>
             <TimelineHeader>
-              <Typography variant="h6" color="blue-gray" className="mt-4 font-bold text-center">
+              <Typography variant="h6" color="blue-gray" className="mt-4 font-bold">
                 Add ID & Bank Information
               </Typography>
             </TimelineHeader>
@@ -94,11 +88,10 @@ import { SiGnuprivacyguard } from "react-icons/si";
           </TimelineItem>
   
           {/* Timeline Item 5 */}
-          <TimelineItem className="col-span-1 flex flex-col items-center ">
-            <TimelineConnector className="invisible" />
-              <TimelineIcon className="p-3 bg-black text-white rounded-full shadow-md">
-                <RiFileList3Fill className="h-8 w-8" />
-              </TimelineIcon>
+          <TimelineItem className="flex flex-col items-center lg:items-start text-center lg:text-left">
+            <TimelineIcon className="p-3 bg-[#00C982] text-white rounded-full shadow-md">
+              <RiFileList3Fill className="h-8 w-8" />
+            </TimelineIcon>
             <TimelineHeader>
               <Typography variant="h6" color="blue-gray" className="mt-4 font-bold">
                 List Products

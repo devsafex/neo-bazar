@@ -38,7 +38,7 @@ const BecomeSeller = () => {
             alt="Free Registration"
             className="w-20 h-20"
           />
-          <div>
+          <div className="">
             <h3 className="text-3xl lg:leading-loose font-semibold text-gray-800">
               Free Registration
             </h3>
