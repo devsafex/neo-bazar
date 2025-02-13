@@ -11,7 +11,7 @@ import useAuth from "../../hooks/useAuth";
 import { useEffect, useState } from "react";
 
 const Navlinks = () => {
- const {user} = useAuth()
+  const { user } = useAuth();
 
   const [openNav, setOpenNav] = useState(false);
   useEffect(() => {
@@ -22,68 +22,68 @@ const Navlinks = () => {
   }, []);
 
   const navList = (
-    <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row text-black lg:items-center lg:gap-6">
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <Link to="/" className="flex items-center">
-          Home
-        </Link>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <a href="#" className="flex items-center">
-          About
-        </a>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <a href="#" className="flex items-center">
-          Help
-        </a>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <a href="#" className="flex items-center">
-          My orders
-        </a>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-
-          Become a seller
-        </Link>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <Link to="/dashboard" className="flex items-center">
-          Dashboard
-        </Link>
-      </Typography>
-    </ul>
+    <div>
+      <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row text-black lg:items-center lg:gap-6">
+        <Typography
+          as="li"
+          variant="small"
+          color="blue-gray"
+          className="p-1 font-normal"
+        >
+          <Link to="/" className="flex items-center">
+            Home
+          </Link>
+        </Typography>
+        <Typography
+          as="li"
+          variant="small"
+          color="blue-gray"
+          className="p-1 font-normal"
+        >
+          <a href="#" className="flex items-center">
+            About
+          </a>
+        </Typography>
+        <Typography
+          as="li"
+          variant="small"
+          color="blue-gray"
+          className="p-1 font-normal"
+        >
+          <a href="#" className="flex items-center">
+            Help
+          </a>
+        </Typography>
+        <Typography
+          as="li"
+          variant="small"
+          color="blue-gray"
+          className="p-1 font-normal"
+        >
+          <a href="#" className="flex items-center">
+            My orders
+          </a>
+        </Typography>
+        <Typography
+          as="li"
+          variant="small"
+          color="blue-gray"
+          className="p-1 font-normal"
+        >
+          <Link>Become a seller</Link>
+        </Typography>
+        <Typography
+          as="li"
+          variant="small"
+          color="blue-gray"
+          className="p-1 font-normal"
+        >
+          <Link to="/dashboard" className="flex items-center">
+            Dashboard
+          </Link>
+        </Typography>
+      </ul>
+    </div>
   );
 
   return (
@@ -99,18 +99,20 @@ const Navlinks = () => {
           </Typography>
           <div className="flex items-center gap-4">
             <div className=" hidden lg:block">{navList}</div>
-            {!user&&<div className="flex items-center gap-x-1">
-            <Link to={"/login"}>
-              <Button fullWidth variant="text" size="sm" className="">
-                <span>Log In</span>
-              </Button>
-            </Link>
-            <Link to={"/signup"}>
-              <Button fullWidth size="sm" className=" bg-[#00C982] rounded">
-                <span>Sign Up</span>
-              </Button>
-            </Link>
-          </div>}
+            {!user && (
+              <div className="flex items-center gap-x-1">
+                <Link to={"/login"}>
+                  <Button fullWidth variant="text" size="sm" className="">
+                    <span>Log In</span>
+                  </Button>
+                </Link>
+                <Link to={"/signup"}>
+                  <Button fullWidth size="sm" className=" bg-[#00C982] rounded">
+                    <span>Sign Up</span>
+                  </Button>
+                </Link>
+              </div>
+            )}
             <IconButton
               variant="text"
               className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
@@ -152,18 +154,20 @@ const Navlinks = () => {
         </div>
         <MobileNav open={openNav}>
           {navList}
-          {!user&&<div className="flex items-center gap-x-1">
-            <Link to={"/login"}>
-              <Button fullWidth variant="text" size="sm" className="">
-                <span>Log In</span>
-              </Button>
-            </Link>
-            <Link to={"/signup"}>
-              <Button fullWidth size="sm" className=" bg-[#00C982] rounded">
-                <span>Sign Up</span>
-              </Button>
-            </Link>
-          </div>}
+          {!user && (
+            <div className="flex items-center gap-x-1">
+              <Link to={"/login"}>
+                <Button fullWidth variant="text" size="sm" className="">
+                  <span>Log In</span>
+                </Button>
+              </Link>
+              <Link to={"/signup"}>
+                <Button fullWidth size="sm" className=" bg-[#00C982] rounded">
+                  <span>Sign Up</span>
+                </Button>
+              </Link>
+            </div>
+          )}
         </MobileNav>
       </Navbar>
     </div>

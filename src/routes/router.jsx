@@ -5,6 +5,10 @@ import Products from "../Pages/Products/Products";
 import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
 import ProductDetails from "../Pages/ProductDetails/ProductDetails";
+import Dashboard from "../Layouts/Dashboard";
+import BecomeSeller from "../Pages/BecomeSeller/BecomeSeller";
+import DashboardProducts from "../Pages/Dashboard/DashboardProducts/DashboardProducts";
+import DashboardHome from "../Pages/Dashboard/DashboardHome/DashboardHome";
 
 
 const router = createBrowserRouter([
