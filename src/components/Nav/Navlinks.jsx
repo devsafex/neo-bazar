@@ -11,7 +11,7 @@ import useAuth from "../../hooks/useAuth";
 import { useEffect, useState } from "react";
 
 const Navlinks = () => {
- const {user} = useAuth()
+  const { user } = useAuth();
 
   const [openNav, setOpenNav] = useState(false);
   useEffect(() => {
@@ -59,9 +59,9 @@ const Navlinks = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
+        <Link to={"/myOrder"} className="flex items-center">
           My orders
-        </a>
+        </Link>
       </Typography>
       <Typography
         as="li"
@@ -99,18 +99,20 @@ const Navlinks = () => {
           </Typography>
           <div className="flex items-center gap-4">
             <div className=" hidden lg:block">{navList}</div>
-            {!user&&<div className="flex items-center gap-x-1">
-            <Link to={"/login"}>
-              <Button fullWidth variant="text" size="sm" className="">
-                <span>Log In</span>
-              </Button>
-            </Link>
-            <Link to={"/signup"}>
-              <Button fullWidth size="sm" className=" bg-[#00C982] rounded">
-                <span>Sign Up</span>
-              </Button>
-            </Link>
-          </div>}
+            {!user && (
+              <div className="flex items-center gap-x-1">
+                <Link to={"/login"}>
+                  <Button fullWidth variant="text" size="sm" className="">
+                    <span>Log In</span>
+                  </Button>
+                </Link>
+                <Link to={"/signup"}>
+                  <Button fullWidth size="sm" className=" bg-[#00C982] rounded">
+                    <span>Sign Up</span>
+                  </Button>
+                </Link>
+              </div>
+            )}
             <IconButton
               variant="text"
               className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
@@ -152,18 +154,20 @@ const Navlinks = () => {
         </div>
         <MobileNav open={openNav}>
           {navList}
-          {!user&&<div className="flex items-center gap-x-1">
-            <Link to={"/login"}>
-              <Button fullWidth variant="text" size="sm" className="">
-                <span>Log In</span>
-              </Button>
-            </Link>
-            <Link to={"/signup"}>
-              <Button fullWidth size="sm" className=" bg-[#00C982] rounded">
-                <span>Sign Up</span>
-              </Button>
-            </Link>
-          </div>}
+          {!user && (
+            <div className="flex items-center gap-x-1">
+              <Link to={"/login"}>
+                <Button fullWidth variant="text" size="sm" className="">
+                  <span>Log In</span>
+                </Button>
+              </Link>
+              <Link to={"/signup"}>
+                <Button fullWidth size="sm" className=" bg-[#00C982] rounded">
+                  <span>Sign Up</span>
+                </Button>
+              </Link>
+            </div>
+          )}
         </MobileNav>
       </Navbar>
     </div>

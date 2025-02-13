@@ -8,53 +8,57 @@ import ProductDetails from "../Pages/ProductDetails/ProductDetails";
 import Dashboard from "../Layouts/Dashboard";
 import DashboardHome from "../Pages/Dashboard/DashboardHome/DashboardHome";
 import DashboardProducts from "../Pages/Dashboard/DashboardProducts/DashboardProducts";
+import MyOrder from "../Pages/MyOrder/MyOrder";
 
 const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Main></Main>,
+    children: [
       {
-            path: '/' ,
-            element: <Main></Main> ,
-            children : [
-                  {
-                        path:'/' ,
-                        element: <Home/>
-                  },
-                  {
-                        path:'/products' ,
-                        element: <Products/>
-                  },
-                  {
-                     path:'/product/:id' ,
-                     element: <ProductDetails/>    
-                  },
-                  {
-                        path: '/login',
-                        element: <Login></Login>
-                  },
-                  {
-                        path: '/signup',
-                        element: <SignUp></SignUp>
-                  },
-                 
-            ]
+        path: "/",
+        element: <Home />,
       },
       {
-            path:'/dashboard',
-            element: <Dashboard/>,
-            children:[
-                  {
-                        path:'/dashboard',
-                        element : <Navigate to="/dashboard/dashboard-home" replace/>
-                  },
-                  {
-                        path:'/dashboard/dashboard-home',
-                        element:<DashboardHome/>
-                  },
-                  {
-                        path:'/dashboard/products',
-                        element: <DashboardProducts/>
-                  }
-            ]
-      }
-])
+        path: "/products",
+        element: <Products />,
+      },
+      {
+        path: "/product/:id",
+        element: <ProductDetails />,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/signup",
+        element: <SignUp></SignUp>,
+      },
+      {
+        path: "/myOrder",
+        element: <MyOrder />,
+      },
+    ],
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard />,
+    children: [
+      {
+        path: "/dashboard",
+        element: <Navigate to="/dashboard/dashboard-home" replace />,
+      },
+      {
+        path: "/dashboard/dashboard-home",
+        element: <DashboardHome />,
+      },
+      {
+        path: "/dashboard/products",
+        element: <DashboardProducts />,
+      },
+    ],
+  },
+]);
 
 export default router;
