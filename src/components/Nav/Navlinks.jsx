@@ -70,7 +70,7 @@ const Navlinks = () => {
           color="blue-gray"
           className="p-1 font-normal"
         >
-          <Link>Become a seller</Link>
+          <Link to="/become-seller">Become a seller</Link>
         </Typography>
         <Typography
           as="li"
