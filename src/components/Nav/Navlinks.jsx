@@ -69,7 +69,7 @@ const Navlinks = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <Link to="" className="flex items-center">
+
           Become a seller
         </Link>
       </Typography>
