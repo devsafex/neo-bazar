@@ -29,9 +29,9 @@ const Navlinks = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
+        <Link to="/" className="flex items-center">
           Home
-        </a>
+        </Link>
       </Typography>
       <Typography
         as="li"
@@ -69,7 +69,7 @@ const Navlinks = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <Link to={'become-seller'} className="flex items-center">
+
           Become a seller
         </Link>
       </Typography>
@@ -79,9 +79,9 @@ const Navlinks = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
+        <Link to="/dashboard" className="flex items-center">
           Dashboard
-        </a>
+        </Link>
       </Typography>
     </ul>
   );

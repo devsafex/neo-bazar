@@ -1,11 +1,11 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 import Main from "../Layouts/Main";
 import Home from "../Pages/Home/Home";
 import Products from "../Pages/Products/Products";
 import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
 import ProductDetails from "../Pages/ProductDetails/ProductDetails";
-import BecomeSeller from "../Pages/BecomeSeller/BecomeSeller";
+
 
 const router = createBrowserRouter([
       {
@@ -37,6 +37,24 @@ const router = createBrowserRouter([
                         element: <SignUp />
                   },
                  
+            ]
+      },
+      {
+            path:'/dashboard',
+            element: <Dashboard/>,
+            children:[
+                  {
+                        path:'/dashboard',
+                        element : <Navigate to="/dashboard/dashboard-home" replace/>
+                  },
+                  {
+                        path:'/dashboard/dashboard-home',
+                        element:<DashboardHome/>
+                  },
+                  {
+                        path:'/dashboard/products',
+                        element: <DashboardProducts/>
+                  }
             ]
       }
 ])
