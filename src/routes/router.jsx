@@ -14,37 +14,37 @@ import Dashboard from "../Layouts/Dashboard";
 import BecomeSeller from "../Pages/BecomeSeller/BecomeSeller";
 >>>>>>> c170e7303305d536823953f48c45d0c099c50ff2
 import DashboardProducts from "../Pages/Dashboard/DashboardProducts/DashboardProducts";
+import DashboardHome from "../Pages/Dashboard/DashboardHome/DashboardHome";
 
 const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Main></Main>,
+    children: [
       {
-            path: '/' ,
-            element: <Main></Main> ,
-            children : [
-                  {
-                        path:'/' ,
-                        element: <Home/>
-                  },
-                  {
-                        path:'/products' ,
-                        element: <Products/>
-                  },
-                  {
-                     path:'/product/:id' ,
-                     element: <ProductDetails/>    
-                  },
-                  {
-                        path: '/login',
-                        element: <Login></Login>
-                  },
-                  {
-                        path: '/signup',
-                        element: <SignUp></SignUp>
-                  },
-                 
-            ]
+        path: "/",
+        element: <Home />,
       },
+      {
+        path: "/products",
+        element: <Products />,
+      },
+      {
+        path: "/product/:id",
+        element: <ProductDetails />,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/signup",
+        element: <SignUp></SignUp>,
+      },
+      
     ],
   },
+
   {
     path: "/dashboard",
     element: <Dashboard />,
