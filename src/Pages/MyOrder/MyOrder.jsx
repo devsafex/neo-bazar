@@ -32,7 +32,7 @@ const MyOrder = () => {
         {/* min box  */}
         <div className="col-span-7 overflow-x-scroll  md:col-span-9 lg:col-span-10 mt-4 p-3 border-2 min-h-screen">
           {/* search container  */}
-          <div className="flex  items-center">
+          <div className="flex  w-11/12 mx-auto items-center">
             <input
               type="text"
               className="border-2 min-w-4xl border-[#00C982] w-full rounded-l-lg p-2 "
@@ -53,6 +53,7 @@ const MyOrder = () => {
             </Button>
           </div>
           {/* order history  */}
+          <div className="mt-2"></div>
         </div>
       </div>
     </div>
