@@ -8,37 +8,37 @@ import ProductDetails from "../Pages/ProductDetails/ProductDetails";
 import Dashboard from "../Layouts/Dashboard";
 import BecomeSeller from "../Pages/BecomeSeller/BecomeSeller";
 import DashboardProducts from "../Pages/Dashboard/DashboardProducts/DashboardProducts";
+import DashboardHome from "../Pages/Dashboard/DashboardHome/DashboardHome";
 
 const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Main></Main>,
+    children: [
       {
-            path: '/' ,
-            element: <Main></Main> ,
-            children : [
-                  {
-                        path:'/' ,
-                        element: <Home/>
-                  },
-                  {
-                        path:'/products' ,
-                        element: <Products/>
-                  },
-                  {
-                     path:'/product/:id' ,
-                     element: <ProductDetails/>    
-                  },
-                  {
-                        path: '/login',
-                        element: <Login></Login>
-                  },
-                  {
-                        path: '/signup',
-                        element: <SignUp></SignUp>
-                  },
-                 
-            ]
+        path: "/",
+        element: <Home />,
       },
+      {
+        path: "/products",
+        element: <Products />,
+      },
+      {
+        path: "/product/:id",
+        element: <ProductDetails />,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/signup",
+        element: <SignUp></SignUp>,
+      },
+      
     ],
   },
+
   {
     path: "/dashboard",
     element: <Dashboard />,
