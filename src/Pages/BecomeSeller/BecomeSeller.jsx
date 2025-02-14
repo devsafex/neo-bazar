@@ -4,10 +4,10 @@ const BecomeSeller = () => {
   return (
     <div className="container mx-auto py-12 px-4">
       {/* Header Section */}
-      <p className="text-lg text-gray-600 mt-4">
+      {/* <p className="text-lg text-gray-600 mt-4">
         Learn all about ecommerce for free and get help with seller support and
         NeoBazar University.
-      </p>
+      </p> */}
       <div className="mb-12">
         <h1 className=" text-3xl mt-5 md:mt-10 lg:mt-16 md:text-4xl lg:text-6xl lg:leading-relaxed tracking-wide font-medium text-gray-800">
           Why Sell on Neo Bazar?
