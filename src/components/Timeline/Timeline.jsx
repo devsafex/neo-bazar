@@ -16,12 +16,12 @@ import {
     return (
       <div className="w-full max-w-7xl mx-auto relative py-10 px-4">
         {/* Vertical Line */}
-        <div className="absolute w-10/12 left-24 top-17 h-[2px] bg-gray-400 hidden lg:block"></div>
+        <div className="absolute w-10/12 left-24 top-17 h-[2px] bg-[#00C982] hidden lg:block"></div>
   
         <Timeline className="grid lg:grid-cols-5 grid-cols-1 gap-10">
           {/* Timeline Item 1 */}
           <TimelineItem className="flex flex-col items-center lg:items-start text-center lg:text-left">
-            <TimelineIcon className="p-3 bg-gray-400 text-white rounded-full shadow-md mx-auto">
+            <TimelineIcon className="p-3 bg-[#00C982] text-white rounded-full shadow-md mx-auto">
               <SiGnuprivacyguard className="h-8 w-8" />
             </TimelineIcon>
             <TimelineHeader className="w-full mt-3">
@@ -38,7 +38,7 @@ import {
   
           {/* Timeline Item 2 */}
           <TimelineItem className="flex flex-col items-center lg:items-start text-center lg:text-left">
-            <TimelineIcon className="p-3 mx-auto bg-gray-400 text-white rounded-full shadow-md">
+            <TimelineIcon className="p-3 mx-auto bg-[#00C982] text-white rounded-full shadow-md">
               <IoPersonAdd className="h-8 w-8" />
             </TimelineIcon>
             <TimelineHeader className="w-full mt-3">
@@ -55,7 +55,7 @@ import {
   
           {/* Timeline Item 3 */}
           <TimelineItem className="flex flex-col items-center lg:items-start text-center lg:text-left">
-            <TimelineIcon className="p-3 mx-auto bg-gray-400 text-white rounded-full shadow-md">
+            <TimelineIcon className="p-3 mx-auto bg-[#00C982] text-white rounded-full shadow-md">
               <FaAddressBook className="h-8 w-8" />
             </TimelineIcon>
             <TimelineHeader className="w-full mt-3">
@@ -72,7 +72,7 @@ import {
   
           {/* Timeline Item 4 */}
           <TimelineItem className="flex flex-col items-center lg:items-start text-center lg:text-left">
-            <TimelineIcon className="p-3 mx-auto bg-gray-400 text-white rounded-full shadow-md">
+            <TimelineIcon className="p-3 mx-auto bg-[#00C982] text-white rounded-full shadow-md">
               <FaAddressCard className="h-8 w-8" />
             </TimelineIcon>
             <TimelineHeader className="w-full mt-3">
@@ -89,7 +89,7 @@ import {
   
           {/* Timeline Item 5 */}
           <TimelineItem className="flex flex-col items-center lg:items-start text-center lg:text-left">
-            <TimelineIcon className="p-3 mx-auto bg-gray-400 text-white rounded-full shadow-md">
+            <TimelineIcon className="p-3 mx-auto bg-[#00C982] text-white rounded-full shadow-md">
               <RiFileList3Fill className="h-8 w-8" />
             </TimelineIcon>
             <TimelineHeader className="w-full mt-3">
