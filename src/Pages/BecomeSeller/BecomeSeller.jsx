@@ -12,12 +12,21 @@ const BecomeSeller = () => {
         className="p-12 w-full"
       >
         {/* Content goes here */}
-        <div className="text-white max-w-7xl mx-auto">
+        <div className="text-white justify-around flex flex-col md:flex-row  ">
           <div className="w-1/2">
-          <h2 className="text-6xl leading-relaxed">Become an NeoBazar seller today!</h2>
-          <p className="text-xl mb-4">Sell on NeoBazar, most visited shopping destination.</p>
-          <Button>Start Selling</Button>
+            <h2 className="text-6xl leading-relaxed">
+              Become an NeoBazar seller today!
+            </h2>
+            <p className="text-xl mb-4">
+              Sell on NeoBazar, most visited shopping destination.
+            </p>
+            <Button>Start Selling</Button>
           </div>
+          <div className="">
+            <img src="https://i.imgur.com/DexMECt.png" className="" alt="" />
+          </div>
+         
+
         </div>
       </div>
       {/* Header Section */}
