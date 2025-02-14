@@ -49,8 +49,8 @@ const DashboardHome = () => {
   return (
     <div>
       <div className="mx-12 py-4">
-        <section className=" flex justify-between">
-          <div className=" grid grid-cols-1 md:grid-cols-2 w-1/2 gap-3">
+        <section className=" flex flex-col xl:flex-row  gap-6 justify-between">
+          <div className=" grid grid-cols-1 md:grid-cols-2 2xl:w-1/2  gap-3">
             <div className=" flex items-center max-w-xs  bg-[#00C982]/10  p-4 rounded justify-between">
               {" "}
               <div className=" p-3 rounded  w-fit">
