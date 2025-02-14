@@ -14,7 +14,7 @@ const AllCategory = () => {
   }, []);
 
   return (
-    <div className="w-full container  -mb-10">
+    <div className="w-full container mx-auto -mb-10">
       <Swiper
         breakpoints={{
           320: { slidesPerView: 4, spaceBetween: 5 }, // Mobile

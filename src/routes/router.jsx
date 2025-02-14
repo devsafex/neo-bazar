@@ -5,70 +5,23 @@ import Products from "../Pages/Products/Products";
 import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
 import ProductDetails from "../Pages/ProductDetails/ProductDetails";
-<<<<<<< HEAD
-import BecomeSeller from "../Pages/BecomeSeller/BecomeSeller";
-import Dashboard from "../Layouts/Dashboard";
-import DashboardHome from "../Pages/Dashboard/DashboardHome/DashboardHome";
-=======
 import Dashboard from "../Layouts/Dashboard";
 import BecomeSeller from "../Pages/BecomeSeller/BecomeSeller";
 
->>>>>>> d081070fbad16be023e6b53f0cc86d47be002ff3
 import DashboardProducts from "../Pages/Dashboard/DashboardProducts/DashboardProducts";
+import DashboardHome from "../Pages/Dashboard/DashboardHome/DashboardHome";
+import MyOrder from "../Pages/MyOrder/MyOrder";
 
 const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Main></Main>,
+    children: [
       {
-            path: '/' ,
-            element: <Main></Main> ,
-            children : [
-                  {
-                        path:'/' ,
-                        element: <Home/>
-                  },
-                  {
-                        path:'/products' ,
-                        element: <Products/>
-                  },
-                  {
-                        path:'/become-seller' ,
-                        element: <BecomeSeller />
-                  },
-                  {
-                     path:'/product/:id' ,
-                     element: <ProductDetails/>    
-                  },
-                  {
-                        path: '/login',
-                        element: <Login />
-                  },
-                  {
-                        path: '/signup',
-                        element: <SignUp />
-                  },
-                 
-            ]
+        path: "/",
+        element: <Home />,
       },
       {
-<<<<<<< HEAD
-            path:'/dashboard',
-            element: <Dashboard/>,
-            children:[
-                  {
-                        path:'/dashboard',
-                        element : <Navigate to="/dashboard/dashboard-home" replace/>
-                  },
-                  {
-                        path:'/dashboard/dashboard-home',
-                        element:<DashboardHome/>
-                  },
-                  {
-                        path:'/dashboard/products',
-                        element: <DashboardProducts/>
-                  }
-            ]
-      }
-])
-=======
         path: "/products",
         element: <Products />,
       },
@@ -85,7 +38,12 @@ const router = createBrowserRouter([
         element: <SignUp></SignUp>,
       },
       {
-      
+       path:'/my-order',
+       element: <MyOrder/>
+      },
+      {
+        path:'become-seller',
+        element: <BecomeSeller/>
       }
     ],
   },
@@ -109,6 +67,5 @@ const router = createBrowserRouter([
     ],
   },
 ]);
->>>>>>> d081070fbad16be023e6b53f0cc86d47be002ff3
 
 export default router;

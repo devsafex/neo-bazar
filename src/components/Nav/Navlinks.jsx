@@ -69,9 +69,9 @@ const Navlinks = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        
+
         <Link to={'/become-seller'} className="flex items-center">
-          Become a seller
+         Become a seller
         </Link>
       </Typography>
       <Typography
