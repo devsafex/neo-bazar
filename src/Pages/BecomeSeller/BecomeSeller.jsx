@@ -17,7 +17,7 @@ const BecomeSeller = () => {
       {/* Features Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {/* Feature Cards */}
-        <div className="flex items-start gap-6 bg-white shadow-lg rounded-lg p-6">
+        <div className="flex items-start gap-6 bg-white rounded-lg p-6">
           <img
             src="https://i.imgur.com/ehDR9au.png"
             alt="Reach"
@@ -32,7 +32,7 @@ const BecomeSeller = () => {
           </div>
         </div>
 
-        <div className="flex items-start gap-6 bg-white shadow-lg rounded-lg p-6">
+        <div className="flex items-start gap-6 bg-white rounded-lg p-6">
           <img
             src="https://i.imgur.com/wuiExFu.png"
             alt="Free Registration"
@@ -48,7 +48,7 @@ const BecomeSeller = () => {
           </div>
         </div>
 
-        <div className="flex items-start gap-6 bg-white shadow-lg rounded-lg p-6">
+        <div className="flex items-start gap-6 bg-white rounded-lg p-6">
           <img
             src="https://i.imgur.com/YNOTfRb.png"
             alt="Reliable Shipping"
@@ -65,7 +65,7 @@ const BecomeSeller = () => {
           </div>
         </div>
 
-        <div className="flex items-start gap-6 bg-white shadow-lg rounded-lg p-6">
+        <div className="flex items-start gap-6 bg-white rounded-lg p-6">
           <img
             src="https://i.imgur.com/YhKcorA.png"
             alt="Timely Payments"
@@ -82,7 +82,7 @@ const BecomeSeller = () => {
           </div>
         </div>
 
-        <div className="flex items-start gap-6 bg-white shadow-lg rounded-lg p-6">
+        <div className="flex items-start gap-6 bg-white rounded-lg p-6">
           <img
             src="https://i.imgur.com/2fDYQT0.png"
             alt="Marketing Tools"
@@ -99,7 +99,7 @@ const BecomeSeller = () => {
           </div>
         </div>
 
-        <div className="flex items-start gap-6 bg-white shadow-lg rounded-lg p-6">
+        <div className="flex items-start gap-6 bg-white rounded-lg p-6">
           <img
             src="https://i.imgur.com/PAL7bx0.png"
             alt="Support & Training"

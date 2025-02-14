@@ -69,11 +69,8 @@ const Navlinks = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-<<<<<<<<< Temporary merge branch 1
-        <Link to="" className="flex items-center">
-=========
-        <Link to={'become-seller'} className="flex items-center">
->>>>>>>>> Temporary merge branch 2
+        
+        <Link to={'/become-seller'} className="flex items-center">
           Become a seller
         </Link>
       </Typography>
