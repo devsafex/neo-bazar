@@ -9,7 +9,7 @@ const BecomeSeller = () => {
         NeoBazar University.
       </p> */}
       <div className="mb-12">
-        <h1 className=" text-3xl mt-5 md:mt-10 lg:mt-16 md:text-4xl lg:text-6xl lg:leading-relaxed tracking-wide font-medium text-gray-800">
+        <h1 className=" text-3xl mt-5 md:mt-10 lg:mt-16 md:text-4xl lg:text-5xl lg:leading-relaxed tracking-wide font-medium text-gray-800">
           Why Sell on Neo Bazar?
         </h1>
       </div>
@@ -24,7 +24,7 @@ const BecomeSeller = () => {
             className="w-20 h-20"
           /> 
           <div>
-            <h3 className="text-3xl lg:leading-loose font-semibold text-gray-800">Reach</h3>
+            <h3 className="text-3xl lg:leading-relaxed xl:leading-loose font-semibold text-gray-800">Reach</h3>
             <p className="text-gray-600">
               Millions of customers on NeoBazar, the most visited shopping
               destination.
@@ -39,7 +39,7 @@ const BecomeSeller = () => {
             className="w-20 h-20"
           />
           <div className="">
-            <h3 className="text-3xl lg:leading-loose font-semibold text-gray-800">
+            <h3 className="text-3xl lg:leading-relaxed xl:leading-loose font-semibold text-gray-800">
               Free Registration
             </h3>
             <p className="text-gray-600">
@@ -55,7 +55,7 @@ const BecomeSeller = () => {
             className="w-20 h-20"
           />
           <div>
-            <h3 className="text-3xl lg:leading-loose font-semibold text-gray-800">
+            <h3 className="text-3xl lg:leading-relaxed xl:leading-loose font-semibold text-gray-800">
               Reliable Shipping
             </h3>
             <p className="text-gray-600">
@@ -72,7 +72,7 @@ const BecomeSeller = () => {
             className="w-20 h-20"
           />
           <div>
-            <h3 className="text-3xl lg:leading-loose font-semibold text-gray-800">
+            <h3 className="text-3xl lg:leading-relaxed xl:leading-loose font-semibold text-gray-800">
               Timely Payments
             </h3>
             <p className="text-gray-600">
@@ -89,7 +89,7 @@ const BecomeSeller = () => {
             className="w-20 h-20"
           />
           <div>
-            <h3 className="text-3xl lg:leading-loose font-semibold text-gray-800">
+            <h3 className="text-3xl lg:leading-relaxed xl:leading-loose font-semibold text-gray-800">
               Marketing Tools
             </h3>
             <p className="text-gray-600">
@@ -106,7 +106,7 @@ const BecomeSeller = () => {
             className="w-20 h-20"
           />
           <div>
-            <h3 className="text-3xl lg:leading-loose font-semibold text-gray-800">
+            <h3 className="text-3xl lg:leading-relaxed xl:leading-loose font-semibold text-gray-800">
               Support & Training
             </h3>
             <p className="text-gray-600">
@@ -118,7 +118,7 @@ const BecomeSeller = () => {
       </div>
 
       <div className="mb-12">
-        <h1 className=" text-3xl mt-5 md:mt-10 lg:mt-16 md:text-4xl lg:text-6xl lg:leading-relaxed tracking-wide font-medium text-gray-800">
+        <h1 className=" text-3xl mt-5 md:mt-10 lg:mt-16 md:text-4xl lg:text-5xl lg:leading-relaxed tracking-wide font-medium text-gray-800">
         5 Simple Steps to Start Selling
         </h1>
       </div>
