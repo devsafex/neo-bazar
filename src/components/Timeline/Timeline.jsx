@@ -14,9 +14,9 @@ import {
   
   export function TimelineWithIcon() {
     return (
-      <div className="w-full max-w-7xl mx-auto relative py-10 px-4">
+      <div className="w-full max-w-7xl mx-auto relative px-4">
         {/* Vertical Line */}
-        <div className="absolute w-10/12 left-24 top-17 h-[2px] bg-[#00C982] hidden lg:block"></div>
+        <div className="absolute w-10/12 left-25 top-7 h-[2px] bg-[#00C982] hidden lg:block"></div>
   
         <Timeline className="grid lg:grid-cols-5 grid-cols-1 gap-10">
           {/* Timeline Item 1 */}

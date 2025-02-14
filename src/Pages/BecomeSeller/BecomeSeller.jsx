@@ -1,13 +1,31 @@
+import { Button } from "@material-tailwind/react";
 import { TimelineWithIcon } from "../../components/Timeline/Timeline";
-
 const BecomeSeller = () => {
   return (
-    <div className="container mx-auto py-12 px-4">
+    <div className="container mx-auto pb-12">
+      <div
+        style={{
+          backgroundImage: "url('https://i.imgur.com/RiIUNKl.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+        className="p-12 w-full"
+      >
+        {/* Content goes here */}
+        <div className="text-white max-w-7xl mx-auto">
+          <div className="w-1/2">
+          <h2 className="text-6xl leading-relaxed">Become an NeoBazar seller today!</h2>
+          <p className="text-xl mb-4">Sell on NeoBazar, most visited shopping destination.</p>
+          <Button>Start Selling</Button>
+          </div>
+        </div>
+      </div>
       {/* Header Section */}
       {/* <p className="text-lg text-gray-600 mt-4">
         Learn all about ecommerce for free and get help with seller support and
-        NeoBazar University.
-      </p> */} 
+        NeoBazar.
+      </p> */}
+
       <div className="mb-12">
         <h1 className=" text-3xl mt-5 md:mt-10 lg:mt-16 md:text-4xl lg:text-5xl lg:leading-relaxed tracking-wide font-medium text-gray-800">
           Why Sell on Neo Bazar?
@@ -22,9 +40,11 @@ const BecomeSeller = () => {
             src="https://i.imgur.com/ehDR9au.png"
             alt="Reach"
             className="w-20 h-20"
-          /> 
+          />
           <div>
-            <h3 className="text-3xl lg:leading-relaxed xl:leading-loose font-semibold text-gray-800">Reach</h3>
+            <h3 className="text-3xl lg:leading-relaxed xl:leading-loose font-semibold text-gray-800">
+              Reach
+            </h3>
             <p className="text-gray-600">
               Millions of customers on NeoBazar, the most visited shopping
               destination.
@@ -118,8 +138,8 @@ const BecomeSeller = () => {
       </div>
 
       <div className="mb-12">
-        <h1 className=" text-3xl mt-5 md:mt-10 lg:mt-16 md:text-4xl lg:text-5xl lg:leading-relaxed tracking-wide font-medium text-gray-800">
-        5 Simple Steps to Start Selling
+        <h1 className=" text-3xl mt-5 text-center md:mt-10 lg:mt-16 md:text-4xl lg:text-5xl lg:leading-relaxed tracking-wide font-medium text-gray-800">
+          5 Simple Steps to Start Selling
         </h1>
       </div>
       <TimelineWithIcon></TimelineWithIcon>
