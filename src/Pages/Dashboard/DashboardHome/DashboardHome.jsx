@@ -1,47 +1,55 @@
-
-import { Bar, BarChart, CartesianGrid, Legend, XAxis, YAxis , Tooltip} from "recharts";
+import {
+  Bar,
+  BarChart,
+  CartesianGrid,
+  Legend,
+  XAxis,
+  YAxis,
+  Tooltip,
+} from "recharts";
+import { RecentOrders } from "../../../components/RecentOrders/RecentOrders";
 const data = [
   {
-    "name": "Page A",
-    "uv": 4000,
-    "pv": 2400
+    name: "Page A",
+    uv: 4000,
+    pv: 2400,
   },
   {
-    "name": "Page B",
-    "uv": 3000,
-    "pv": 1398
+    name: "Page B",
+    uv: 3000,
+    pv: 1398,
   },
   {
-    "name": "Page C",
-    "uv": 2000,
-    "pv": 9800
+    name: "Page C",
+    uv: 2000,
+    pv: 9800,
   },
   {
-    "name": "Page D",
-    "uv": 2780,
-    "pv": 3908
+    name: "Page D",
+    uv: 2780,
+    pv: 3908,
   },
   {
-    "name": "Page E",
-    "uv": 1890,
-    "pv": 4800
+    name: "Page E",
+    uv: 1890,
+    pv: 4800,
   },
   {
-    "name": "Page F",
-    "uv": 2390,
-    "pv": 3800
+    name: "Page F",
+    uv: 2390,
+    pv: 3800,
   },
   {
-    "name": "Page G",
-    "uv": 3490,
-    "pv": 4300
-  }
-]
+    name: "Page G",
+    uv: 3490,
+    pv: 4300,
+  },
+];
 const DashboardHome = () => {
   return (
     <div>
-      <div>
-        <section className="mx-12 py-4 flex justify-between">
+      <div className="mx-12 py-4">
+        <section className=" flex justify-between">
           <div className=" grid grid-cols-1 md:grid-cols-2 w-1/2 gap-3">
             <div className=" flex items-center max-w-xs  bg-[#00C982]/10  p-4 rounded justify-between">
               {" "}
@@ -112,6 +120,12 @@ const DashboardHome = () => {
                 <Bar dataKey="uv" fill="red" />
               </BarChart>
             </div>
+          </div>
+        </section>
+        <section>
+          <h1 className=" text-2xl mt-4">Recent Orders</h1>
+          <div>
+            <RecentOrders/>
           </div>
         </section>
       </div>
