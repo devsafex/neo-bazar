@@ -7,9 +7,9 @@ import SignUp from "../Pages/SignUp/SignUp";
 import ProductDetails from "../Pages/ProductDetails/ProductDetails";
 import Dashboard from "../Layouts/Dashboard";
 import BecomeSeller from "../Pages/BecomeSeller/BecomeSeller";
+
 import DashboardProducts from "../Pages/Dashboard/DashboardProducts/DashboardProducts";
 import DashboardHome from "../Pages/Dashboard/DashboardHome/DashboardHome";
-import MyOrder from "../Pages/MyOrder/MyOrder";
 
 const router = createBrowserRouter([
   {
@@ -25,27 +25,23 @@ const router = createBrowserRouter([
         element: <Products />,
       },
       {
-        path: "/become-seller",
-        element: <BecomeSeller />,
-      },
-      {
         path: "/product/:id",
         element: <ProductDetails />,
       },
       {
         path: "/login",
-        element: <Login />,
+        element: <Login></Login>,
       },
       {
         path: "/signup",
-        element: <SignUp />,
+        element: <SignUp></SignUp>,
       },
       {
-        path: "/myOrders",
-        element: <MyOrder />,
-      },
+      
+      }
     ],
   },
+
   {
     path: "/dashboard",
     element: <Dashboard />,
