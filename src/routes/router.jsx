@@ -6,60 +6,60 @@ import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
 import ProductDetails from "../Pages/ProductDetails/ProductDetails";
 import Dashboard from "../Layouts/Dashboard";
-import DashboardHome from "../Pages/Dashboard/DashboardHome/DashboardHome";
+import BecomeSeller from "../Pages/BecomeSeller/BecomeSeller";
+
 import DashboardProducts from "../Pages/Dashboard/DashboardProducts/DashboardProducts";
-import DashboardAddProduct from "../Pages/Dashboard/DashboardAddProduct/DashboardAddProduct";
+import DashboardHome from "../Pages/Dashboard/DashboardHome/DashboardHome";
 
 const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Main></Main>,
+    children: [
       {
-            path: '/' ,
-            element: <Main></Main> ,
-            children : [
-                  {
-                        path:'/' ,
-                        element: <Home/>
-                  },
-                  {
-                        path:'/products' ,
-                        element: <Products/>
-                  },
-                  {
-                     path:'/product/:id' ,
-                     element: <ProductDetails/>    
-                  },
-                  {
-                        path: '/login',
-                        element: <Login></Login>
-                  },
-                  {
-                        path: '/signup',
-                        element: <SignUp></SignUp>
-                  },
-                 
-            ]
+        path: "/",
+        element: <Home />,
       },
       {
-            path:'/dashboard',
-            element: <Dashboard/>,
-            children:[
-                  {
-                        path:'/dashboard',
-                        element : <Navigate to="/dashboard/dashboard-home" replace/>
-                  },
-                  {
-                        path:'/dashboard/dashboard-home',
-                        element:<DashboardHome/>
-                  },
-                  {
-                        path:'/dashboard/products',
-                        element: <DashboardProducts/>
-                  },
-                  {
-                        path:'/dashboard/add-products',
-                        element: <DashboardAddProduct/>
-                  }
-            ]
+        path: "/products",
+        element: <Products />,
+      },
+      {
+        path: "/product/:id",
+        element: <ProductDetails />,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/signup",
+        element: <SignUp></SignUp>,
+      },
+      {
+      
       }
-])
+    ],
+  },
+
+  {
+    path: "/dashboard",
+    element: <Dashboard />,
+    children: [
+      {
+        path: "/dashboard",
+        element: <Navigate to="/dashboard/dashboard-home" replace />,
+      },
+      {
+        path: "/dashboard/dashboard-home",
+        element: <DashboardHome />,
+      },
+      {
+        path: "/dashboard/products",
+        element: <DashboardProducts />,
+      },
+    ],
+  },
+]);
 
 export default router;
