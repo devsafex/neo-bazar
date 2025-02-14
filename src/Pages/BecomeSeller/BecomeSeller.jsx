@@ -22,7 +22,7 @@ const BecomeSeller = () => {
             src="https://i.imgur.com/ehDR9au.png"
             alt="Reach"
             className="w-20 h-20"
-          />
+          /> 
           <div>
             <h3 className="text-3xl lg:leading-loose font-semibold text-gray-800">Reach</h3>
             <p className="text-gray-600">
