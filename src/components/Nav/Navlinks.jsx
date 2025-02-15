@@ -12,7 +12,7 @@ import { useEffect, useState } from "react";
 
 const Navlinks = () => {
   const { user } = useAuth();
-
+ 
   const [openNav, setOpenNav] = useState(false);
   useEffect(() => {
     window.addEventListener(
