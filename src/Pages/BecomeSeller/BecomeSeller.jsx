@@ -12,9 +12,9 @@ const BecomeSeller = () => {
         className="p-12 w-full"
       >
         {/* Content goes here */}
-        <div className="text-white justify-around flex flex-col md:flex-row  ">
-          <div className="w-1/2">
-            <h2 className="text-6xl leading-relaxed">
+        <div className="text-white justify-around flex flex-col md:flex-row gap-10 md:gap-0">
+          <div className="lg:w-1/2">
+            <h2 className="text-3xl md:text-4xl lg:text-6xl leading-12 md:leading-16 lg:leading-relaxed">
               Become an NeoBazar seller today!
             </h2>
             <p className="text-xl mb-4">
@@ -35,7 +35,7 @@ const BecomeSeller = () => {
         NeoBazar.
       </p> */}
 
-      <div className="mb-12">
+      <div className="mb-12 w-11/12 mx-auto lg:mx-0">
         <h1 className=" text-3xl mt-5 md:mt-10 lg:mt-16 md:text-4xl lg:text-5xl lg:leading-relaxed tracking-wide font-medium text-gray-800">
           Why Sell on Neo Bazar?
         </h1>
