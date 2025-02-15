@@ -23,7 +23,7 @@ const MyOrder = () => {
           <IconButton onClick={() => setShowFilters(!showFilters)} className="bg-[#00C982] text-white">
             {showFilters ? <FaTimes size={20} /> : <FaBars size={20} />}
           </IconButton>
-          
+          {!showFilters && <h1 className="text-xl font-bold">Filter Options</h1>}
           
         </div>
 
