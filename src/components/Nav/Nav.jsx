@@ -21,7 +21,7 @@ const Nav = () => {
                 type="text"
                 placeholder="Search..."
                 className=" focus:outline-0 border py-1 md:pr-8 pr-8 w-full md:w-96 md:py-2  px-2 md:px-5 rounded"
-              />
+              /> 
             </div>
           </div>
           <div className=" space-x-2 flex items-center">

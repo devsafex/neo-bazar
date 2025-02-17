@@ -19,7 +19,7 @@ const ProfileDropdown = () => {
         <MenuHandler>
           <Avatar
             variant="circular"
-            alt="tania andrew"
+            alt={user?.displayName}
             className="cursor-pointer w-10 h-10 border-2 border-white"
             src={user?.photoURL || "https://i.imgur.com/YoviWA4.png"}
           />
