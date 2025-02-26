@@ -1,6 +1,6 @@
 # Primary Color - #00C982
 
-# DevSafeX - E-Commerce Platform 🚀 
+# DevSafeX - E-Commerce Platform 
  
 ## 📌 Project Overview
 DevSafeX is a modern and secure e-commerce platform that provides users with a smart and seamless shopping experience. Users can browse various product categories, add items to their cart, and place orders easily.
