@@ -1,0 +1,183 @@
+[
+    {
+      "id": 1,
+      "name": "Smart Watch",
+      "price": "$99.99",
+      "discount_price": "$79.99",
+      "image": "https://i.imgur.com/Z5SmBpX.png",
+      "rating": 4.5,
+      "reviews": 10,
+      "description": "Stay connected and track your fitness. Monitors heart rate and steps. Long battery life and water-resistant."
+    },
+    {
+      "id": 2,
+      "name": "Men's Casual Shirt",
+      "price": "$30.00",
+      "discount_price": "$22.99",
+      "image": "https://i.imgur.com/iKnsw8P.png",
+      "rating": 4.3,
+      "reviews": 12,
+      "description": "Stylish and comfortable cotton shirt. Perfect for casual wear. Available in various colors and sizes."
+    },
+    {
+      "id": 3,
+      "name": "Women's Handbag",
+      "price": "$59.99",
+      "discount_price": "$45.99",
+      "image": "https://i.imgur.com/Z8kE3iT.png",
+      "rating": 4.7,
+      "reviews": 18,
+      "description": "Elegant leather handbag with multiple compartments. Stylish and spacious for daily use."
+    },
+    {
+      "id": 4,
+      "name": "Baby Stroller",
+      "price": "$150.00",
+      "discount_price": "$120.00",
+      "image": "https://i.ibb.co.com/NdytTLX0/baby-stroller.webp",
+      "rating": 4.6,
+      "reviews": 14,
+      "description": "Lightweight and foldable baby stroller. Comfortable seat with safety belt and storage space."
+    },
+    {
+      "id": 5,
+      "name": "Men's Sneakers",
+      "price": "$49.99",
+      "discount_price": "$39.99",
+      "image": "https://i.imgur.com/iKnsw8P.png",
+      "rating": 4.5,
+      "reviews": 20,
+      "description": "Trendy and comfortable sneakers for everyday wear. Durable and available in different colors."
+    },
+    {
+      "id": 6,
+      "name": "Silk Saree",
+      "price": "$99.00",
+      "discount_price": "$79.99",
+      "image": "https://i.imgur.com/kdG782d.png",
+      "rating": 4.8,
+      "reviews": 25,
+      "description": "Traditional silk saree with elegant embroidery. Perfect for weddings and special occasions."
+    },
+    {
+      "id": 7,
+      "name": "Baby Feeding Set",
+      "price": "$25.99",
+      "discount_price": "$19.99",
+      "image": "https://i.ibb.co.com/YgNGP03/baby-feeding.webp",
+      "rating": 4.4,
+      "reviews": 10,
+      "description": "Complete feeding set with a bottle, bowl, and spoon. BPA-free and safe for babies."
+    },
+    {
+      "id": 8,
+      "name": "Women's Winter Jacket",
+      "price": "$120.00",
+      "discount_price": "$99.99",
+      "image": "https://i.imgur.com/1C9UEFX.png",
+      "rating": 4.9,
+      "reviews": 30,
+      "description": "Warm and stylish jacket for winter. Made with high-quality fabric for extra comfort."
+    },
+    {
+      "id": 9,
+      "name": "Automatic Watch",
+      "price": "$79.20",
+      "discount_price": "$20.72",
+      "image": "https://i.imgur.com/doYAad5.png",
+      "rating": 4.5,
+      "reviews": 10,
+      "description": "Classic automatic wristwatch with premium design. No battery needed, self-winding mechanism. Stylish and elegant for any occasion."
+    },
+    {
+      "id": 10,
+      "name": "Kid's Backpack",
+      "price": "$35.00",
+      "discount_price": "$24.99",
+      "image": "https://i.imgur.com/yGeI1kI.png",
+      "rating": 4.6,
+      "reviews": 15,
+      "description": "Colorful and spacious backpack for kids. Perfect for school and travel."
+    },
+    {
+      "id": 11,
+      "name": "Women's Sandals",
+      "price": "$45.00",
+      "discount_price": "$29.99",
+      "image": "https://i.imgur.com/LcvgksB.png",
+      "rating": 4.5,
+      "reviews": 22,
+      "description": "Comfortable and stylish sandals for women. Suitable for both casual and party wear."
+    },
+    {
+      "id": 12,
+      "name": "Makeup Brush Set",
+      "price": "$25.99",
+      "discount_price": "$18.99",
+      "image": "https://i.ibb.co.com/zWdWh5vL/makeup-kit-bag.webp",
+      "rating": 4.7,
+      "reviews": 17,
+      "description": "Professional makeup brush set with soft bristles. Perfect for blending and contouring."
+    },
+    {
+      "id": 13,
+      "name": "Bluetooth Headphones",
+      "price": "$99.99",
+      "discount_price": "$69.99",
+      "image": "https://i.imgur.com/2UcHEl4.png",
+      "rating": 4.6,
+      "reviews": 22,
+      "description": "Noise-canceling wireless headphones. Comfortable fit with long battery life."
+    },
+    {
+      "id": 14,
+      "name": "Baby Onesies (Pack of 3)",
+      "price": "$29.99",
+      "discount_price": "$24.99",
+      "image": "https://i.imgur.com/Fhrj3UG.png",
+      "rating": 4.8,
+      "reviews": 14,
+      "description": "Soft cotton onesies for babies. Comfortable and perfect for daily wear."
+    },
+    {
+      "id": 15,
+      "name": "Wooden Coffee Table",
+      "price": "$199.99",
+      "discount_price": "$159.99",
+      "image": "https://i.imgur.com/1W8Mff2.png",
+      "rating": 4.5,
+      "reviews": 18,
+      "description": "Stylish wooden coffee table with modern design. Perfect for home decor."
+    },
+    {
+      "id": 16,
+      "name": "Men's Leather Wallet",
+      "price": "$39.99",
+      "discount_price": "$29.99",
+      "image": "https://i.imgur.com/iyWcZC9.png",
+      "rating": 4.7,
+      "reviews": 10,
+      "description": "Premium leather wallet with multiple compartments. Compact and durable."
+    },
+    {
+      "id": 17,
+      "name": "Cotton Bedsheet Set",
+      "price": "$49.99",
+      "discount_price": "$39.99",
+      "image": "https://i.imgur.com/9j8cZuE.png",
+      "rating": 4.6,
+      "reviews": 20,
+      "description": "Soft and breathable cotton bedsheet set. Includes pillow covers."
+    },
+    {
+      "id": 18,
+      "name": "Men's Formal Shoes",
+      "price": "$79.99",
+      "discount_price": "$59.99",
+      "image": "https://i.imgur.com/jYnoou2.png",
+      "rating": 4.5,
+      "reviews": 15,
+      "description": "Elegant leather formal shoes for office and parties."
+    }
+  ]
+  
