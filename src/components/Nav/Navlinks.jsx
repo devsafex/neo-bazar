@@ -1,18 +1,18 @@
 import {
-  Navbar,
-  MobileNav,
-  Typography,
   Button,
   IconButton,
+  MobileNav,
+  Navbar,
+  Typography,
 } from "@material-tailwind/react";
 
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
-import { useEffect, useState } from "react";
 
 const Navlinks = () => {
   const { user } = useAuth();
- 
+
   const [openNav, setOpenNav] = useState(false);
   useEffect(() => {
     window.addEventListener(
@@ -49,7 +49,7 @@ const Navlinks = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
+        <a href="help" className="flex items-center">
           Help
         </a>
       </Typography>
@@ -69,9 +69,8 @@ const Navlinks = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-
-        <Link to={'/become-seller'} className="flex items-center">
-         Become a seller
+        <Link to={"/become-seller"} className="flex items-center">
+          Become a seller
         </Link>
       </Typography>
       <Typography

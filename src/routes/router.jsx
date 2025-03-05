@@ -1,15 +1,16 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
-import Main from "../Layouts/Main";
-import Home from "../Pages/Home/Home";
-import Products from "../Pages/Products/Products";
-import Login from "../Pages/Login/Login";
-import SignUp from "../Pages/SignUp/SignUp";
-import ProductDetails from "../Pages/ProductDetails/ProductDetails";
 import Dashboard from "../Layouts/Dashboard";
+import Main from "../Layouts/Main";
 import BecomeSeller from "../Pages/BecomeSeller/BecomeSeller";
+import Home from "../Pages/Home/Home";
+import Login from "../Pages/Login/Login";
+import ProductDetails from "../Pages/ProductDetails/ProductDetails";
+import Products from "../Pages/Products/Products";
+import SignUp from "../Pages/SignUp/SignUp";
 
-import DashboardProducts from "../Pages/Dashboard/DashboardProducts/DashboardProducts";
 import DashboardHome from "../Pages/Dashboard/DashboardHome/DashboardHome";
+import DashboardProducts from "../Pages/Dashboard/DashboardProducts/DashboardProducts";
+import Help from "../Pages/Help/Help";
 import MyOrder from "../Pages/MyOrder/MyOrder";
 
 const router = createBrowserRouter([
@@ -38,13 +39,17 @@ const router = createBrowserRouter([
         element: <SignUp></SignUp>,
       },
       {
-       path:'/my-order',
-       element: <MyOrder/>
+        path: "/my-order",
+        element: <MyOrder />,
       },
       {
-        path:'become-seller',
-        element: <BecomeSeller/>
-      }
+        path: "become-seller",
+        element: <BecomeSeller />,
+      },
+      {
+        path: "help",
+        element: <Help />,
+      },
     ],
   },
 
