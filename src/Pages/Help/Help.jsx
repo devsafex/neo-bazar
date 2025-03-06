@@ -1,3 +1,5 @@
+import FaqSwiper from "./FaqSwiper";
+
 export default function Help() {
   return (
     <section className="w-11/12 mx-auto py-12">
@@ -42,6 +44,10 @@ export default function Help() {
             Search
           </button>
         </div>
+      </div>
+      {/* Popular Questions */}
+      <div className="py-8">
+        <FaqSwiper />
       </div>
     </section>
   );
