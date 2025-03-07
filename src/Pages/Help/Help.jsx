@@ -1,10 +1,22 @@
+import { useEffect, useState } from "react";
+import { AiChat } from "./AiChat";
 import FaqSwiper from "./FaqSwiper";
+import ProblemCategoryCard from "./ProblemCategoryCard";
+import SectionTitle from "./SectionTitle";
 
 export default function Help() {
+  const [category, setCategory] = useState([]);
+  useEffect(() => {
+    fetch("/category.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setCategory(data);
+      });
+  }, []);
   return (
-    <section className="w-11/12 mx-auto py-12">
+    <section className="w-11/12 mx-auto py-8 md:pt-12">
       {/* Section Heading */}
-      <div className="flex justify-between items-center">
+      <div className="flex flex-col md:flex-row gap-5 justify-between items-center">
         {/* Heading Text */}
         <div>
           <h2 className="text-black font-bold text-xl">You got a problem?</h2>
@@ -46,8 +58,29 @@ export default function Help() {
         </div>
       </div>
       {/* Popular Questions */}
-      <div className="py-8">
+      <div className="py-6">
+        <SectionTitle
+          title={"Popular Questions"}
+          subTitle={"Find your solve here, may be it already exists!"}
+        />
         <FaqSwiper />
+      </div>
+      {/* Problem Category */}
+      <div className="py-6">
+        <SectionTitle title={"Problem Category"} />
+        <div className="flex items-center justify-center gap-4 overflow-x-scroll pb-2 lg:overflow-x-auto">
+          {category.map((item) => (
+            <ProblemCategoryCard
+              key={item.id}
+              image={item.img}
+              category={item.name}
+            />
+          ))}
+        </div>
+      </div>
+      {/* AI ChatBox */}
+      <div className="pt-12 relative">
+        <AiChat />
       </div>
     </section>
   );
