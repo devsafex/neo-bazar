@@ -36,12 +36,12 @@ const Navlinks = () => {
       <Typography
         as="li"
         variant="small"
-        color="blue-gray"
+        color="blue-gray" 
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
+        <Link to="/about" className="flex items-center">
           About
-        </a>
+        </Link>
       </Typography>
       <Typography
         as="li"
