@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { MdOutlineReportGmailerrorred } from "react-icons/md";
+import { Button } from "./../../Shaired/Button";
 import { AiChat } from "./AiChat";
 import FaqSwiper from "./FaqSwiper";
 import ProblemCategoryCard from "./ProblemCategoryCard";
@@ -14,15 +16,18 @@ export default function Help() {
       });
   }, []);
   return (
-    <section className="w-11/12 mx-auto py-8 md:pt-12">
+    <section className="w-11/12 mx-auto py-7 md:pt-8">
       {/* Section Heading */}
       <div className="flex flex-col md:flex-row gap-5 justify-between items-center">
         {/* Heading Text */}
-        <div>
-          <h2 className="text-black font-bold text-xl">You got a problem?</h2>
-          <p className="text-gray-500">
-            No worry, we will help to solve the problems.
-          </p>
+        <div className="flex items-center gap-1.5">
+          <MdOutlineReportGmailerrorred className="text-red-500 text-5xl" />
+          <div>
+            <h2 className="text-black font-bold text-lg">You got a problem?</h2>
+            <p className="text-gray-500">
+              No worry, we will help to solve the problems.
+            </p>
+          </div>
         </div>
         {/* Search Box */}
         <div className="flex items-center gap-2">
@@ -52,21 +57,26 @@ export default function Help() {
               />
             </label>
           </div>
-          <button className="rounded px-2 py-1.5 bg-[#00C982] text-white font-semibold">
+          {/* <button className="rounded px-2 py-1.5 bg-[#00C982] text-white font-semibold">
             Search
-          </button>
+          </button> */}
+          <Button fullWidth size="sm" className="bg-[#00C982] rounded">
+            <span>Search</span>
+          </Button>
         </div>
       </div>
       {/* Popular Questions */}
-      <div className="py-6">
+      <div className="py-8 md:py-10 lg:py-3">
         <SectionTitle
           title={"Popular Questions"}
           subTitle={"Find your solve here, may be it already exists!"}
         />
-        <FaqSwiper />
+        <div className="pt-4">
+          <FaqSwiper />
+        </div>
       </div>
       {/* Problem Category */}
-      <div className="py-6">
+      <div className="pt-6 md:pt-4">
         <SectionTitle title={"Problem Category"} />
         <div className="flex items-center justify-center gap-4 overflow-x-scroll pb-2 lg:overflow-x-auto">
           {category.map((item) => (

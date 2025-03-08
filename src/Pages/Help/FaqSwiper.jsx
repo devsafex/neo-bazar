@@ -52,7 +52,7 @@ export default function FaqSwiper() {
           {startIndex > 0 && (
             <button
               onClick={prevSlide}
-              className="p-2 md:p-4 bg-[#00C982] text-white rounded-full"
+              className="p-2 md:p-3 bg-[#00C982] text-white rounded-full"
             >
               <FaArrowLeft className="text-base md:text-xl" />
             </button>
@@ -73,7 +73,7 @@ export default function FaqSwiper() {
           {startIndex + cardsPerPage < faq.length && (
             <button
               onClick={nextSlide}
-              className="p-2 md:p-4 bg-[#00C982] text-white rounded-full"
+              className="p-2 md:p-3 bg-[#00C982] text-white rounded-full"
             >
               <FaArrowRight className="text-base md:text-xl" />
             </button>

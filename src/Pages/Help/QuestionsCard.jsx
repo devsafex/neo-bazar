@@ -22,7 +22,7 @@ export default function QuestionsCard({ image, question, answer }) {
             <img
               src={image}
               alt="faq"
-              className="rounded-t-xl w-full h-52 object-cover"
+              className="rounded-t-xl w-full h-28 lg:h-32 object-cover"
             />
           </figure>
           <div className="card-body p-2">

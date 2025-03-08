@@ -1,10 +1,10 @@
-import {
-  Button,
-  Drawer,
-  IconButton,
-  Typography,
-} from "@material-tailwind/react";
+import { Drawer, IconButton, Typography } from "@material-tailwind/react";
 import { useState } from "react";
+import { FaLock } from "react-icons/fa";
+import Logo from "../../Shaired/Logo";
+import AiSpeedDial from "./AISpeedDial";
+import MessagingChat from "./MessagingChat";
+import { SendMessageInput } from "./SendMessageInput";
 
 export function AiChat() {
   const [openBottom, setOpenBottom] = useState(false);
@@ -16,26 +16,19 @@ export function AiChat() {
     <>
       <div
         onClick={openDrawerBottom}
-        className="flex items-center justify-center gap-4 py-3 fixed bottom-10 right-10 z-10 cursor-pointer"
+        className="flex items-center justify-center gap-4 py-3 fixed bottom-10 lg:bottom-5 right-5 lg:right-10 z-10 cursor-pointer"
       >
-        <div>
-          <img
-            src="https://i.ibb.co.com/sJDZg99p/pngfind-com-communication-icon-png-1925445.png"
-            alt="chat-icon"
-            className="w-12 h-12 object-cover bg-green-400 p-2 rounded-full"
-          />
-          <p className="font-semibold text-base text-green-500">AiChat</p>
-        </div>
+        <AiSpeedDial />
       </div>
       <Drawer
         placement="bottom"
         open={openBottom}
         onClose={closeDrawerBottom}
-        className="p-4"
+        className="p-4 bg-gray-50"
       >
-        <div className="mb-6 flex items-center justify-between">
+        <div className="lg:mb-0 flex items-center justify-between w-full lg:w-5/6 mx-auto z-10">
           <Typography variant="h5" color="blue-gray">
-            Material Tailwind
+            <Logo />
           </Typography>
           <IconButton
             variant="text"
@@ -58,15 +51,17 @@ export function AiChat() {
             </svg>
           </IconButton>
         </div>
-        <Typography color="gray" className="mb-8 pr-4 font-normal">
-          Material Tailwind features multiple React and HTML components, all
-          written with Tailwind CSS classes and Material Design guidelines.
-        </Typography>
-        <div className="flex gap-2">
-          <Button size="sm" variant="outlined">
-            Documentation
-          </Button>
-          <Button size="sm">Get Started</Button>
+        <div className="w-3/4 md:w-2/3 lg:w-1/2 h-60 overflow-y-scroll absolute top-3 left-16 md:left-44 lg:left-1/4">
+          <Typography
+            color="gray"
+            className="w-11/12 md:w-3/4 lg:w-2/3 mx-auto mb-4 p-2 font-normal bg-gray-100 text-xs text-yellow-600 text-center flex gap-1"
+          >
+            <FaLock className="pt-1 text-2xl lg:text-base" /> Messages are
+            end-to-end encrypted. No one outside of this chat, no one can read
+            or listen to them. Click to learn more.
+          </Typography>
+          <MessagingChat />
+          <SendMessageInput />
         </div>
       </Drawer>
     </>
