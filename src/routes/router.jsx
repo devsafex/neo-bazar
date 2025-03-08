@@ -11,6 +11,7 @@ import BecomeSeller from "../Pages/BecomeSeller/BecomeSeller";
 import DashboardProducts from "../Pages/Dashboard/DashboardProducts/DashboardProducts";
 import DashboardHome from "../Pages/Dashboard/DashboardHome/DashboardHome";
 import MyOrder from "../Pages/MyOrder/MyOrder";
+import AboutUs from "../Pages/About/AboutUs"
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       {
         path:'become-seller',
         element: <BecomeSeller/>
+      },
+      {
+        path:'/about',
+        element: <AboutUs/>
       }
     ],
   },
