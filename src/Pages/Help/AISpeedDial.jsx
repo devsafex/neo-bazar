@@ -8,12 +8,6 @@ import {
 import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
 
 export default function AiSpeedDial() {
-  //   const labelProps = {
-  //     variant: "small",
-  //     className:
-  //       "absolute top-2/4 -left-2/4 -translate-y-2/4 -translate-x-3/4 font-normal",
-  //   };
-
   return (
     <div className="relative h-80 w-full">
       <div className="absolute bottom-0 right-0">
@@ -25,9 +19,7 @@ export default function AiSpeedDial() {
           </SpeedDialHandler>
           <SpeedDialContent>
             <SpeedDialAction className="relative">
-              <p className="font-semibold p-2 text-sm">
-                Did not find solutions?
-                <br />
+              <p className="font-semibold p-2 text-sm text-[#00C982]">
                 Click to instant chat!
               </p>
             </SpeedDialAction>

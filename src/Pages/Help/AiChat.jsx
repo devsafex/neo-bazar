@@ -1,4 +1,5 @@
 import { Drawer, IconButton, Typography } from "@material-tailwind/react";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import { FaLock } from "react-icons/fa";
 import Logo from "../../Shaired/Logo";
@@ -14,11 +15,27 @@ export function AiChat() {
 
   return (
     <>
-      <div
-        onClick={openDrawerBottom}
-        className="flex items-center justify-center gap-4 py-3 fixed bottom-10 lg:bottom-5 right-5 lg:right-10 z-10 cursor-pointer"
-      >
-        <AiSpeedDial />
+      <div>
+        <div className="fixed bottom-28 lg:bottom-24 right-20 lg:right-24">
+          <motion.div
+            className="absolute inset-0 w-16 h-16 bg-green-400 rounded-full opacity-50"
+            animate={{
+              scale: [1, 1.5, 1],
+              opacity: [0.4, 0.1, 0.4],
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+        </div>
+        <div
+          onClick={openDrawerBottom}
+          className="flex items-center justify-center gap-4 py-3 fixed bottom-11 lg:bottom-7 right-6 lg:right-10 z-10 cursor-pointer"
+        >
+          <AiSpeedDial />
+        </div>
       </div>
       <Drawer
         placement="bottom"

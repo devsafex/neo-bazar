@@ -1,21 +1,14 @@
 /* eslint-disable react/prop-types */
-import {
-  Button,
-  Dialog,
-  DialogBody,
-  DialogFooter,
-  DialogHeader,
-} from "@material-tailwind/react";
 import { useState } from "react";
+import { RxCross2 } from "react-icons/rx";
 
 export default function QuestionsCard({ image, question, answer }) {
-  const [size, setSize] = useState(null);
-  const handleOpen = (value) => setSize(value);
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       <div
         className="hover:transform hover:translate-y-2 hover:transition duration-500 ease-in-out cursor-pointer"
-        onClick={() => handleOpen("xs")}
+        onClick={() => setIsOpen(true)}
       >
         <div className="card w-72 md:w-64 bg-green-100 shadow-sm flex flex-col h-full rounded-xl">
           <figure>
@@ -31,19 +24,29 @@ export default function QuestionsCard({ image, question, answer }) {
         </div>
       </div>
       {/* Modal */}
-      <Dialog open={size === "xs"} size={size || "xs"} handler={handleOpen}>
-        <DialogHeader>{question}</DialogHeader>
-        <DialogBody>{answer}</DialogBody>
-        <DialogFooter>
-          <Button
-            variant="gradient"
-            color="green"
-            onClick={() => handleOpen(null)}
-          >
-            <span>Got it</span>
-          </Button>
-        </DialogFooter>
-      </Dialog>
+      {isOpen && (
+        <div className="fixed inset-0 flex items-center justify-center bg-transparent">
+          <div className="bg-white p-6 rounded-lg shadow-lg w-96 relative  border border-gray-300">
+            <button
+              onClick={() => setIsOpen(false)}
+              className="absolute top-3 right-3 text-gray-500 hover:text-gray-800"
+            >
+              <RxCross2 className="text-lg" />
+            </button>
+
+            <h2 className="text-xl font-semibold mb-4">{question}</h2>
+            <p className="text-gray-600">{answer}</p>
+            <div className="mt-4 flex justify-end">
+              <button
+                onClick={() => setIsOpen(false)}
+                className="px-4 py-2 bg-[#00C982] text-white rounded-lg hover:bg-red-600"
+              >
+                Got it
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }
