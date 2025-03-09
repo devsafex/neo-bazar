@@ -72,13 +72,15 @@ export default function Help() {
           subTitle={"Find your solve here, may be it already exists!"}
         />
         <div className="pt-4">
+          {/* FAQ Swiper */}
           <FaqSwiper />
         </div>
       </div>
       {/* Problem Category */}
       <div className="pt-6 md:pt-4">
         <SectionTitle title={"Problem Category"} />
-        <div className="flex items-center justify-center gap-4 overflow-x-scroll pb-2 lg:overflow-x-auto">
+        {/* Categories */}
+        <div className="flex items-center justify-center gap-4 overflow-x-scroll pb-2 lg:pt-4 lg:overflow-x-auto">
           {category.map((item) => (
             <ProblemCategoryCard
               key={item.id}
@@ -88,7 +90,7 @@ export default function Help() {
           ))}
         </div>
       </div>
-      {/* AI ChatBox */}
+      {/* AiChat Icon */}
       <div className="pt-12 relative">
         <AiChat />
       </div>

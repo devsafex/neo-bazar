@@ -1,6 +1,7 @@
 import ReusableAvatar from "./ReusableAvatar";
 export default function MessagingChat() {
   return (
+    // Conversation Between NEO BAZAR AI & Customer
     <div className="w-full mx-auto">
       <div className="flex items-center justify-start gap-2 pb-2">
         <ReusableAvatar image={"https://i.ibb.co.com/MGp4MPs/nick.png"} />

@@ -2,6 +2,7 @@ import { IoIosSend } from "react-icons/io";
 
 export function SendMessageInput() {
   return (
+    // Message Input Box
     <div className="flex gap-2 items-center w-3/4 md:w-2/3 lg:w-1/2 fixed bottom-0 left-16 md:left-44 lg:left-1/4 pb-2">
       <div className="w-full">
         <input

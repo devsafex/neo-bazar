@@ -4,7 +4,7 @@ import QuestionsCard from "./QuestionsCard";
 
 export default function FaqSwiper() {
   const [startIndex, setStartIndex] = useState(0);
-  // const cardsPerPage = 4;
+  const [faq, setFaq] = useState([]);
   const [cardsPerPage, setCardsPerPage] = useState(4); // Default to desktop (4 cards)
 
   // Update number of cards per page based on screen size
@@ -24,7 +24,6 @@ export default function FaqSwiper() {
     return () => window.removeEventListener("resize", updateCardsPerPage);
   }, []);
 
-  const [faq, setFaq] = useState([]);
   useEffect(() => {
     fetch("/faq.json")
       .then((res) => res.json())
@@ -33,12 +32,13 @@ export default function FaqSwiper() {
       });
   }, []);
 
+  // Swiper Next FAQs
   const nextSlide = () => {
     if (startIndex + cardsPerPage < faq.length) {
       setStartIndex(startIndex + cardsPerPage);
     }
   };
-
+  // Swiper Previous FAQs
   const prevSlide = () => {
     if (startIndex - cardsPerPage >= 0) {
       setStartIndex(startIndex - cardsPerPage);
@@ -48,6 +48,7 @@ export default function FaqSwiper() {
   return (
     <>
       <div className="flex items-center justify-center gap-5 md:gap-8">
+        {/* Previous Arrow */}
         <div className="hover:tranform hover:-translate-x-3 hover:transition duration-700 ease-in-out">
           {startIndex > 0 && (
             <button
@@ -58,6 +59,7 @@ export default function FaqSwiper() {
             </button>
           )}
         </div>
+        {/* Display All FAQs */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
           {faq.slice(startIndex, startIndex + cardsPerPage).map((item) => (
             <QuestionsCard
@@ -69,6 +71,7 @@ export default function FaqSwiper() {
             />
           ))}
         </div>
+        {/* Next Arrow */}
         <div className="hover:tranform hover:translate-x-3 hover:transition duration-700 ease-in-out">
           {startIndex + cardsPerPage < faq.length && (
             <button

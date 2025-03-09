@@ -9,13 +9,13 @@ import { SendMessageInput } from "./SendMessageInput";
 
 export function AiChat() {
   const [openBottom, setOpenBottom] = useState(false);
-
   const openDrawerBottom = () => setOpenBottom(true);
   const closeDrawerBottom = () => setOpenBottom(false);
 
   return (
     <>
       <div>
+        {/* Icon Radiation Animation */}
         <div className="fixed bottom-28 lg:bottom-24 right-20 lg:right-24">
           <motion.div
             className="absolute inset-0 w-16 h-16 bg-green-400 rounded-full opacity-50"
@@ -30,6 +30,7 @@ export function AiChat() {
             }}
           />
         </div>
+        {/* Speed Dial */}
         <div
           onClick={openDrawerBottom}
           className="flex items-center justify-center gap-4 py-3 fixed bottom-11 lg:bottom-7 right-6 lg:right-10 z-10 cursor-pointer"
@@ -37,6 +38,7 @@ export function AiChat() {
           <AiSpeedDial />
         </div>
       </div>
+      {/* ChatBox Drawer */}
       <Drawer
         placement="bottom"
         open={openBottom}
@@ -44,9 +46,11 @@ export function AiChat() {
         className="p-4 bg-gray-50"
       >
         <div className="lg:mb-0 flex items-center justify-between w-full lg:w-5/6 mx-auto z-10">
+          {/* Logo */}
           <Typography variant="h5" color="blue-gray">
             <Logo />
           </Typography>
+          {/* Cross Button */}
           <IconButton
             variant="text"
             color="blue-gray"
@@ -68,7 +72,9 @@ export function AiChat() {
             </svg>
           </IconButton>
         </div>
+        {/* Chat Area */}
         <div className="w-3/4 md:w-2/3 lg:w-1/2 h-60 overflow-y-scroll absolute top-3 left-16 md:left-44 lg:left-1/4">
+          {/* Dummy Encrypt message title */}
           <Typography
             color="gray"
             className="w-11/12 md:w-3/4 lg:w-2/3 mx-auto mb-4 p-2 font-normal bg-gray-100 text-xs text-yellow-600 text-center flex gap-1"
@@ -77,7 +83,9 @@ export function AiChat() {
             end-to-end encrypted. No one outside of this chat, no one can read
             or listen to them. Click to learn more.
           </Typography>
+          {/* Conversations */}
           <MessagingChat />
+          {/* Send Icon & Message Input Area */}
           <SendMessageInput />
         </div>
       </Drawer>
